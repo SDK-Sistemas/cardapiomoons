@@ -51,8 +51,7 @@
                     <div class="_title">Contacts</div>
                     <div class="contacts_info">
                         <div class="tel">
-                            <a href="tel:+19092020119">+ 1909 202 0119</a>
-                            <p>Round the clock support</p>
+                            <a href="tel:+5501434362310">(14) 3436 2310</a>
                         </div>
                         <div class="email">
                             <a href="mailto:info@hellodigi.ru">info@hellodigi.ru</a>
