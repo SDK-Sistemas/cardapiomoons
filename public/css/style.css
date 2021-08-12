@@ -1752,7 +1752,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  padding: 0 8px;
+  padding: 0 13px;
 }
 .top_panel .currency select:hover {
   cursor: pointer;
@@ -1910,11 +1910,16 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   transition: all .2s linear;
 }
 .top_panel .left .logo {
-  width: 138px;
-  height: 48px;
+  width: 130px;
+  height: 40px;
   width: auto;
   display: block;
   float: left;
+  margin-top: 5px;
+}
+
+.top_panel.inversion .left .logo {
+  filter: invert(1);
 }
 .top_panel .left .logo img {
   height: 100%;

@@ -23,9 +23,18 @@
 
 <body>
     <div class="container">
-        <x-header></x-header>
+
+        <x-header>
+        </x-header>
+
         @yield('content')
-        <x-footer></x-footer>
+
+        <x-instagram-grid>
+        </x-instagram-grid>
+
+        <x-footer>
+        </x-footer>
+
     </div>
 
     <script src="js/jquery.min.js"></script>

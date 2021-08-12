@@ -1,4 +1,5 @@
-<div class="top_panel">
+<div class="top_panel @if (in_array(Route::currentRouteName(), ['cardapio', 'contato' , 'reservas'
+    ])) inversion @endif">
     <div class="wrap">
         <div class="wrap_float">
 
@@ -6,7 +7,7 @@
 
             <div class="left">
                 <div class="search_btn"></div>
-                <a href="/" class="logo">
+                <a href="{{ route('home') }}" class="logo">
                     <img src="img/logo.png" alt="">
                 </a>
             </div>
@@ -16,37 +17,41 @@
                         <div class="menu">
                             <ul>
                                 <li>
-                                    <a href="/">
+                                    <a href="{{ route('home') }}" class="{{ Route::is('home') ? 'active' : '' }}">
                                         <span>
-                                            Home
+                                            {{ __('Home') }}
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('cardapio') }}">
+                                    <a href="{{ route('cardapio') }}"
+                                        class="{{ Route::is('cardapio') ? 'active' : '' }}">
                                         <span>
-                                            Cardápio
+                                            {{ __('Cardápio') }}
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/">
+                                    <a href=" {{ route('quem-somos') }}"
+                                        class="{{ Route::is('quem-somos') ? 'active' : '' }}">
                                         <span>
-                                            Quem Somos
+                                            {{ __('Quem Somos') }}
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/">
+                                    <a href=" {{ route('contato') }}"
+                                        class="{{ Route::is('contato') ? 'active' : '' }}">
                                         <span>
-                                            Contato
+                                            {{ __('Contato') }}
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/">
+                                    <a href="{{ route('reservas') }}"
+                                        class="{{ Route::is('reservas') ? 'active' : '' }}">
                                         <span>
-                                            Reservas
+                                            {{ __('Reservas') }}
                                         </span>
                                     </a>
                                 </li>

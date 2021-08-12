@@ -14,7 +14,4 @@
     <x-newsletter>
     </x-newsletter>
 
-    <x-instagram-grid>
-    </x-instagram-grid>
-
 @endsection

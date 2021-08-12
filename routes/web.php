@@ -24,6 +24,15 @@ Route::middleware([SetLocale::class])->group(function () {
     
     Route::view('/cardapio', 'cardapio')
         ->name('cardapio');
+        
+    Route::view('/quem-somos', 'quem-somos')
+        ->name('quem-somos');
+
+    Route::view('/contato', 'contato')
+        ->name('contato');
+
+    Route::view('/reservas', 'reservas')
+        ->name('reservas');
     
 });
 
