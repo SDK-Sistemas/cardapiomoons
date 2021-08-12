@@ -1,9 +1,10 @@
-<div class="currency">
-    <select onchange="window.location.href = `{{ route('home') }}/${this.value}`">
-        @foreach (['pt', 'en', 'es'] as $locale)
-            <option {{ App::isLocale($locale) ? 'selected' : '' }}>
-                {{ $locale }}
+<form action="{{ route('lang') }}" method="POST" class="currency">
+    @csrf
+    <select name="locale" onchange="this.form.submit()">
+        @foreach (['pt' => 'pt_BR', 'en' => 'en', 'es' => 'es'] as $key => $value)
+            <option {{ App::isLocale($value) ? 'selected' : '' }} value="{{ $value }}">
+                {{ $key }}
             </option>
         @endforeach
     </select>
-</div>
+</form>

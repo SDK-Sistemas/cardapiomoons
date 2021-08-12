@@ -8,6 +8,9 @@
     <x-popular>
     </x-popular>
 
+    <x-stories>
+    </x-stories>
+
     <x-newsletter>
     </x-newsletter>
 

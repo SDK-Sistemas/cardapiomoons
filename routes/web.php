@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Middleware\ChangeLocale;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use App\Http\Middleware\ChangeLocale;
+use App\Http\Middleware\SetDefaultLocaleForUrls;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +19,21 @@ use Illuminate\Foundation\Application;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::prefix('{lang?}')->middleware(ChangeLocale::class)->group(function() {
 
+Route::middleware([SetDefaultLocaleForUrls::class])->group(function () {
+    
     Route::view('/', 'home')
         ->name('home');
-
+    
+    Route::view('/cardapio', 'cardapio')
+        ->name('cardapio');
+    
 });
+
+Route::post('/lang', function(Request $request){
+    Session::put('lang', $request->locale);
+    return back();
+})->name('lang');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
