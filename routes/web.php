@@ -2,11 +2,8 @@
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
-use App\Http\Middleware\ChangeLocale;
-use App\Http\Middleware\SetDefaultLocaleForUrls;
+use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Session;
 
 /*
@@ -20,7 +17,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::middleware([SetDefaultLocaleForUrls::class])->group(function () {
+Route::middleware([SetLocale::class])->group(function () {
     
     Route::view('/', 'home')
         ->name('home');
