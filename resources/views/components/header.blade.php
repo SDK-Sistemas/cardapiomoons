@@ -1,13 +1,9 @@
 <div class="top_panel">
     <div class="wrap">
         <div class="wrap_float">
-            <div class="currency">
-                <select>
-                    <option value="usd">usd</option>
-                    <option value="eur">eur</option>
-                    <option value="rub">rub</option>
-                </select>
-            </div>
+
+            <x-select-locale></x-select-locale>
+
             <div class="left">
                 <div class="search_btn"></div>
                 <a href="/" class="logo">

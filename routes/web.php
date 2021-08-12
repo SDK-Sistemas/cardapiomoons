@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\ChangeLocale;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,12 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('{lang?}')->middleware(ChangeLocale::class)->group(function() {
 
-Route::view('/', 'home');
+    Route::view('/', 'home')
+        ->name('home');
+
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
