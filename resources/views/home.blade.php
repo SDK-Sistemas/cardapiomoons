@@ -81,7 +81,7 @@
                 <div class="title_wrap">
                     <h2 class="title">Most Popular Tours</h2>
                     <p class="subtitle">
-                        Latin literature from 45 BC, making it over 2000 years old
+                        Latin literature from 45
                     </p>
                     <div class="controls">
                         <a href="travel-list-right-sidebar.html" class="link">View All Tours</a>
