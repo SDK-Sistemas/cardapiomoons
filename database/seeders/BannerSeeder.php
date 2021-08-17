@@ -15,13 +15,9 @@ class BannerSeeder extends Seeder
      */
     public function run()
     {
-        $image = Image::factory()->make();
-
         Banner::factory()
             ->times(5)
-            ->for(Image::factory()->state([
-                'path' => "banners/{$image->path}.png",
-            ]))
+            ->for(Image::factory()->forBanner())
             ->hasTranslations(3)
             ->create();
     }
