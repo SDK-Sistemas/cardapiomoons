@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Banners;
+use App\Models\Banner;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BannersFactory extends Factory
+class BannerFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Banners::class;
+    protected $model = Banner::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,10 @@ class BannersFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'image_id'    => null,
+            'title'       => $this->faker->word(2),
+            'subtitle'    => $this->faker->word(4),
+            'description' => $this->faker->word(10)
         ];
     }
 }

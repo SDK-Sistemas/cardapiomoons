@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Middleware\SetLocale;
@@ -18,13 +19,13 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::middleware([SetLocale::class])->group(function () {
-    
-    Route::view('/', 'home')
+
+    Route::get('/', [PageController::class, 'home'])
         ->name('home');
-    
+
     Route::view('/cardapio', 'cardapio')
         ->name('cardapio');
-        
+
     Route::view('/quem-somos', 'quem-somos')
         ->name('quem-somos');
 
@@ -33,10 +34,9 @@ Route::middleware([SetLocale::class])->group(function () {
 
     Route::view('/reservas', 'reservas')
         ->name('reservas');
-    
 });
 
-Route::post('/lang', function(Request $request){
+Route::post('/lang', function (Request $request) {
     Session::put('lang', $request->locale);
     return back();
 })->name('lang');
@@ -45,4 +45,4 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

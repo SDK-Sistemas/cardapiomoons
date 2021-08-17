@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <x-banner-slider>
+    <x-banner-slider :banners="$banners">
     </x-banner-slider>
 
     <x-popular>

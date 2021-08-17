@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Stories;
+use App\Models\Storie;
 use Illuminate\Http\Request;
 
-class StoriesController extends Controller
+class StorieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class StoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Stories  $stories
+     * @param  \App\Models\Storie  $storie
      * @return \Illuminate\Http\Response
      */
-    public function show(Stories $stories)
+    public function show(Storie $storie)
     {
         //
     }
@@ -52,10 +52,10 @@ class StoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Stories  $stories
+     * @param  \App\Models\Storie  $storie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Stories $stories)
+    public function edit(Storie $storie)
     {
         //
     }
@@ -64,10 +64,10 @@ class StoriesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Stories  $stories
+     * @param  \App\Models\Storie  $storie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Stories $stories)
+    public function update(Request $request, Storie $storie)
     {
         //
     }
@@ -75,10 +75,10 @@ class StoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Stories  $stories
+     * @param  \App\Models\Storie  $storie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Stories $stories)
+    public function destroy(Storie $storie)
     {
         //
     }

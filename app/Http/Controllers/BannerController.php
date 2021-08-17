@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Translations;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
-class TranslationsController extends Controller
+class BannerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TranslationsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Translations  $translations
+     * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function show(Translations $translations)
+    public function show(Banner $banner)
     {
         //
     }
@@ -52,10 +52,10 @@ class TranslationsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Translations  $translations
+     * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Translations $translations)
+    public function edit(Banner $banner)
     {
         //
     }
@@ -64,10 +64,10 @@ class TranslationsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Translations  $translations
+     * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Translations $translations)
+    public function update(Request $request, Banner $banner)
     {
         //
     }
@@ -75,10 +75,10 @@ class TranslationsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Translations  $translations
+     * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Translations $translations)
+    public function destroy(Banner $banner)
     {
         //
     }

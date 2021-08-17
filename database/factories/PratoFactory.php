@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Stories;
+use App\Models\Prato;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class StoriesFactory extends Factory
+class PratoFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Stories::class;
+    protected $model = Prato::class;
 
     /**
      * Define the model's default state.

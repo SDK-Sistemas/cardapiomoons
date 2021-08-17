@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class CategoriasSeeder extends Seeder
+class PratoSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banners;
+use App\Models\Prato;
 use Illuminate\Http\Request;
 
-class BannersController extends Controller
+class PratoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class BannersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Banners  $banners
+     * @param  \App\Models\Prato  $prato
      * @return \Illuminate\Http\Response
      */
-    public function show(Banners $banners)
+    public function show(Prato $prato)
     {
         //
     }
@@ -52,10 +52,10 @@ class BannersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Banners  $banners
+     * @param  \App\Models\Prato  $prato
      * @return \Illuminate\Http\Response
      */
-    public function edit(Banners $banners)
+    public function edit(Prato $prato)
     {
         //
     }
@@ -64,10 +64,10 @@ class BannersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Banners  $banners
+     * @param  \App\Models\Prato  $prato
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Banners $banners)
+    public function update(Request $request, Prato $prato)
     {
         //
     }
@@ -75,10 +75,10 @@ class BannersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Banners  $banners
+     * @param  \App\Models\Prato  $prato
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Banners $banners)
+    public function destroy(Prato $prato)
     {
         //
     }

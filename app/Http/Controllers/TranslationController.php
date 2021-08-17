@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pratos;
+use App\Models\Translation;
 use Illuminate\Http\Request;
 
-class PratosController extends Controller
+class TranslationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PratosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pratos  $pratos
+     * @param  \App\Models\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function show(Pratos $pratos)
+    public function show(Translation $translation)
     {
         //
     }
@@ -52,10 +52,10 @@ class PratosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pratos  $pratos
+     * @param  \App\Models\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pratos $pratos)
+    public function edit(Translation $translation)
     {
         //
     }
@@ -64,10 +64,10 @@ class PratosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pratos  $pratos
+     * @param  \App\Models\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pratos $pratos)
+    public function update(Request $request, Translation $translation)
     {
         //
     }
@@ -75,10 +75,10 @@ class PratosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pratos  $pratos
+     * @param  \App\Models\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pratos $pratos)
+    public function destroy(Translation $translation)
     {
         //
     }
