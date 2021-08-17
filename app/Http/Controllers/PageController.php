@@ -10,12 +10,20 @@ class PageController extends Controller
     {
 
         $banner1 = (object) [
+            'image' => (object) [
+                'path' => 'banners/teste.png',
+                'alt'  => 'Teste'
+            ],
             'title' => 'Title 1',
             'subtitle' => 'Subtitle 1',
             'description' => 'Lorem ipsum'
         ];
 
         $banner2 = (object) [
+            'image' => (object) [
+                'path' => 'banners/teste2.png',
+                'alt'  => 'Teste'
+            ],
             'title' => 'Title 2',
             'subtitle' => 'Subtitle 2',
             'description' => 'Lorem ipsum'

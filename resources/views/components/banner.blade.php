@@ -1,5 +1,5 @@
 <div class="slide">
-    <div class="bg-img" style="background-image: url(img/demo-bg.jpg)"></div>
+    <div class="bg-img" style="background-image: url({{ asset("storage/{$banner->image->path}") }})"></div>
     <div class="wrap">
         <div class="wrap_float js_height">
             <div class="slide_content">

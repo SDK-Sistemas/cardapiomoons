@@ -22,7 +22,8 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'path' => "{$this->faker->word(1)}.png",
+            'alt'   => $this->faker->word(4)
         ];
     }
 }

@@ -17,7 +17,7 @@ class BannerSeeder extends Seeder
     {
         Banner::factory()
             ->times(5)
-            ->has(Image::factory())
+            ->has(Image::factory()->create(['path' => "banners/{$this->faker->word(1)}.png"]))
             ->create();
     }
 }
