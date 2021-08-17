@@ -15,9 +15,14 @@ class BannerSeeder extends Seeder
      */
     public function run()
     {
+        $image = Image::factory()->make();
+
         Banner::factory()
             ->times(5)
-            ->has(Image::factory()->create(['path' => "banners/{$this->faker->word(1)}.png"]))
+            ->for(Image::factory()->state([
+                'path' => "banners/{$image->path}.png",
+            ]))
+            ->hasTranslations(3)
             ->create();
     }
 }

@@ -22,7 +22,12 @@ class TranslationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'locale'      => 'pt_BR',
+            'translation' => [
+                'title' => $this->faker->word(2),
+                'subtitle' => $this->faker->word(3),
+                'description' => $this->faker->word(6),
+            ]
         ];
     }
 }

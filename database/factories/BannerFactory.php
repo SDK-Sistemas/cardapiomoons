@@ -21,11 +21,6 @@ class BannerFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'image_id'    => null,
-            'title'       => $this->faker->word(2),
-            'subtitle'    => $this->faker->word(4),
-            'description' => $this->faker->word(10)
-        ];
+        return [];
     }
 }
