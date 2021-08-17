@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriasTranslationsTable extends Migration
+class CreateTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateCategoriasTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorias_translations', function (Blueprint $table) {
+        Schema::create('translations', function (Blueprint $table) {
             $table->id();
+            $table->string('locale');
+            $table->json('translation');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCategoriasTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias_translations');
+        Schema::dropIfExists('translations');
     }
 }

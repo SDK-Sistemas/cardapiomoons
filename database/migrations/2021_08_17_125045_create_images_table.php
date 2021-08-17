@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePratosTranslationsTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreatePratosTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pratos_translations', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->string('path');
+            $table->string('alt')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreatePratosTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pratos_translations');
+        Schema::dropIfExists('images');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannersTranslationsTable extends Migration
+class CreateTranslationableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateBannersTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('banners_translations', function (Blueprint $table) {
+        Schema::create('translationable', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('translation_id');
+            $table->morphs('translationable');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateBannersTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners_translations');
+        Schema::dropIfExists('translationable');
     }
 }

@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\PratosTranslations;
+use App\Models\Translations;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PratosTranslationsFactory extends Factory
+class TranslationsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = PratosTranslations::class;
+    protected $model = Translations::class;
 
     /**
      * Define the model's default state.

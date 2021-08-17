@@ -15,6 +15,7 @@ class CreateStoriesTable extends Migration
     {
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('image_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

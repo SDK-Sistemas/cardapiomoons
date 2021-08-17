@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoriasTranslations;
+use App\Models\Translations;
 use Illuminate\Http\Request;
 
-class CategoriasTranslationsController extends Controller
+class TranslationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CategoriasTranslationsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CategoriasTranslations  $categoriasTranslations
+     * @param  \App\Models\Translations  $translations
      * @return \Illuminate\Http\Response
      */
-    public function show(CategoriasTranslations $categoriasTranslations)
+    public function show(Translations $translations)
     {
         //
     }
@@ -52,10 +52,10 @@ class CategoriasTranslationsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CategoriasTranslations  $categoriasTranslations
+     * @param  \App\Models\Translations  $translations
      * @return \Illuminate\Http\Response
      */
-    public function edit(CategoriasTranslations $categoriasTranslations)
+    public function edit(Translations $translations)
     {
         //
     }
@@ -64,10 +64,10 @@ class CategoriasTranslationsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CategoriasTranslations  $categoriasTranslations
+     * @param  \App\Models\Translations  $translations
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CategoriasTranslations $categoriasTranslations)
+    public function update(Request $request, Translations $translations)
     {
         //
     }
@@ -75,10 +75,10 @@ class CategoriasTranslationsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CategoriasTranslations  $categoriasTranslations
+     * @param  \App\Models\Translations  $translations
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CategoriasTranslations $categoriasTranslations)
+    public function destroy(Translations $translations)
     {
         //
     }

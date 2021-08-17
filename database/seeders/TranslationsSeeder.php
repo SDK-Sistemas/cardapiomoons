@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class PratosTranslationsSeeder extends Seeder
+class TranslationsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
