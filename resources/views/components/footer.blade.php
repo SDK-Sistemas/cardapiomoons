@@ -4,46 +4,43 @@
             <div class="footer_top">
                 <div class="left">
                     <div class="col">
-                        <div class="_title m_title">Travel list</div>
+                        <div class="_title m_title">{{ __('Links Rápidos') }}</div>
                         <ul>
-                            <li><a href="travel-list-full-width.html">Travel list Full With</a></li>
-                            <li><a href="travel-list-right-sidebar.html">Travel list Right Sidebar</a></li>
-                            <li><a href="travel-list-left-sidebar.html">Travel list Left Sidebar</a></li>
-                            <li><a href="travel-list-image-header.html">Travel list Full With Image Header</a>
+                            <li>
+                                <a href="{{ route('home') }}">
+                                    <span>
+                                        {{ __('Home') }}
+                                    </span>
+                                </a>
                             </li>
-                            <li><a href="search-results.html">Search Result</a></li>
-                            <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
-                            <li><a href="tour-page-right-sidebar.html">Tour page Right Sidebar</a></li>
-                            <li><a href="tour-page-left-sidebar.html">Tour page Left Sidebar</a></li>
-                            <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a>
+                            <li>
+                                <a href="{{ route('cardapio') }}">
+                                    <span>
+                                        {{ __('Cardápio') }}
+                                    </span>
+                                </a>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <div class="_title m_title">Page</div>
-                        <ul>
-                            <li><a href="stories-full-width.html">Stories Full With</a></li>
-                            <li><a href="story.html">Stories Single</a></li>
-                            <li><a href="stories-right-sidebar.html">Stories Right Sidebar</a></li>
-                            <li><a href="stories-left-sidebar.html">Stories Left Sidebar</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="gallery-single.html">Gallery Single</a></li>
-                            <li><a href="404.html">404 page</a></li>
-                            <li><a href="static-page-right-sidebar.html">Static Page Right Sidebar</a></li>
-                            <li><a href="static-page-left-sidebar.html">Static Page Left Sidebar</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <div class="_title m_title">Blog</div>
-                        <ul>
-                            <li><a href="blog-full-width.html">Blog Full With</a></li>
-                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                            <li><a href="blog-search-results.html">Search Result</a></li>
-                            <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                            <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                            <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
+                            <li>
+                                <a href=" {{ route('quem-somos') }}">
+                                    <span>
+                                        {{ __('Quem Somos') }}
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=" {{ route('contato') }}">
+                                    <span>
+                                        {{ __('Contato') }}
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('reservas') }}">
+                                    <span>
+                                        {{ __('Reservas') }}
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
