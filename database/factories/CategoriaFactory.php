@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Image;
 use App\Models\Categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,7 @@ class CategoriaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'image_id' => Image::factory()->forCategoria()
         ];
     }
 }

@@ -22,7 +22,7 @@ class PratoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'price' => $this->faker->randomFloat(2, 20, 200)
         ];
     }
 }

@@ -15,4 +15,9 @@ class Image extends Model
     {
         return $this->hasOne(Banner::class, 'foreign_key', 'local_key');
     }
+
+    public function pratos()
+    {
+        return $this->belongsToMany(Prato::class);
+    }
 }

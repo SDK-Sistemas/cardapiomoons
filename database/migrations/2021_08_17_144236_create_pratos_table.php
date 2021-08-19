@@ -15,6 +15,7 @@ class CreatePratosTable extends Migration
     {
         Schema::create('pratos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('categoria_id');
             $table->float('price');
             $table->timestamps();
         });

@@ -24,7 +24,6 @@ class Banner extends Model
         return $this->morphMany(Translation::class, 'translationable');
     }
 
-
     public function getTitleAttribute()
     {
         return $this->curr_translation()->title;

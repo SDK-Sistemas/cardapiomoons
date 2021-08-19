@@ -33,4 +33,18 @@ class ImageFactory extends Factory
             'path' => 'banners/' . $this->faker->image(\storage_path() . '\app\public\banners', 1600, 1200, 'food', false, true, false, false),
         ]);
     }
+
+    public function forPrato()
+    {
+        return $this->state([
+            'path' => 'pratos/' . $this->faker->image(\storage_path() . '\app\public\pratos', 1600, 1200, 'food', false, true, false, false),
+        ]);
+    }
+
+    public function forCategoria()
+    {
+        return $this->state([
+            'path' => 'categorias/' . $this->faker->image(\storage_path() . '\app\public\categorias', 1600, 1200, 'food', false, true, false, false),
+        ]);
+    }
 }
