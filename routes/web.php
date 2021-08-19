@@ -23,8 +23,11 @@ Route::middleware([SetLocale::class])->group(function () {
     Route::get('/', [PageController::class, 'home'])
         ->name('home');
 
-    Route::view('/cardapio', 'cardapio')
+    Route::get('/cardapio', [PageController::class, 'cardapio'])
         ->name('cardapio');
+
+    Route::get('/cardapio/{categoria}', [PageController::class, 'categoria'])
+        ->name('categoria');
 
     Route::view('/quem-somos', 'quem-somos')
         ->name('quem-somos');

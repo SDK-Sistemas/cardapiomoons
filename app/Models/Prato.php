@@ -33,6 +33,11 @@ class Prato extends Model
         return $this->morphMany(Translation::class, 'translationable');
     }
 
+    public function getPriceAttribute($value)
+    {
+        return number_format($value, 2, ',', '.');
+    }
+
     public function getTitleAttribute()
     {
         return $this->curr_translation()->title;
