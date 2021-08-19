@@ -22,8 +22,8 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'path' => $this->faker->image(\storage_path(), 1200, 1600, 'food', true),
-            'alt'   => $this->faker->word(4)
+            'path' => null,
+            'alt'  => $this->faker->word(4)
         ];
     }
 
@@ -34,10 +34,10 @@ class ImageFactory extends Factory
         ]);
     }
 
-    public function forPrato()
+    public function forStorie()
     {
         return $this->state([
-            'path' => 'pratos/' . $this->faker->image(\storage_path() . '\app\public\pratos', 1600, 1200, 'food', false, true, false, false),
+            'path' => 'stories/' . $this->faker->image(\storage_path() . '\app\public\stories', 1600, 1200, 'food', false, true, false, false),
         ]);
     }
 
@@ -45,6 +45,13 @@ class ImageFactory extends Factory
     {
         return $this->state([
             'path' => 'categorias/' . $this->faker->image(\storage_path() . '\app\public\categorias', 1600, 1200, 'food', false, true, false, false),
+        ]);
+    }
+
+    public function forPrato()
+    {
+        return $this->state([
+            'path' => 'pratos/' . $this->faker->image(\storage_path() . '\app\public\pratos', 1600, 1200, 'food', false, true, false, false),
         ]);
     }
 }

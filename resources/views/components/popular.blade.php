@@ -24,7 +24,7 @@
                             <x-slot name="title">
                                 {{ $prato->title }}
                             </x-slot>
-                            {{ $prato->description }}
+                            {{ $prato->subtitle }}
                         </x-card>
                     @endforeach
                 </div>

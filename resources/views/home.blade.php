@@ -8,7 +8,7 @@
     <x-popular :pratos="$pratos">
     </x-popular>
 
-    <x-stories>
+    <x-stories :stories="$stories">
     </x-stories>
 
     <x-newsletter>
