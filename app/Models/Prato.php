@@ -15,7 +15,7 @@ class Prato extends Model
 
     protected $appends = ['title', 'subtitle', 'description'];
 
-    protected $with = ['translations'];
+    protected $with = ['translations', 'images'];
 
     public function images()
     {

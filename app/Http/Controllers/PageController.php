@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prato;
 use App\Models\Banner;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class PageController extends Controller
     {
         return view('home', [
             'banners' => Banner::with(['image'])->get(),
+            'pratos'  => Prato::inRandomOrder()->take(5)->get()
         ]);
     }
 }

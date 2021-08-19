@@ -5,7 +5,7 @@
     <x-banner-slider :banners="$banners">
     </x-banner-slider>
 
-    <x-popular>
+    <x-popular :pratos="$pratos">
     </x-popular>
 
     <x-stories>

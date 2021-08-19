@@ -16,11 +16,14 @@ class PratoSeeder extends Seeder
      */
     public function run()
     {
-        Prato::factory()
-            ->times(5)
-            ->has(Image::factory()->count(3)->forPrato())
-            ->for(Categoria::factory())
-            ->hasTranslations(3)
-            ->create();
+        foreach (Categoria::all() as $categoria) {
+            Prato::factory()
+                ->times(3)
+                ->has(Image::factory()->count(3)->forPrato())
+                ->hasTranslations(3)
+                ->create([
+                    'categoria_id' => $categoria->id
+                ]);
+        }
     }
 }

@@ -16,15 +16,17 @@
             </div>
             <div class="section_content">
                 <div class="tour-slider" id="tour-slider">
-                    <x-card href="#">
-                        <x-slot name="subtitle">
-                            Teste
-                        </x-slot>
-                        <x-slot name="title">
-                            Title
-                        </x-slot>
-                        Titulo
-                    </x-card>
+                    @foreach ($pratos as $prato)
+                        <x-card href="#" background="{{ asset('storage/' . $prato->images->first()->path) }}">
+                            <x-slot name="subtitle">
+                                {{ $prato->categoria->title }}
+                            </x-slot>
+                            <x-slot name="title">
+                                {{ $prato->title }}
+                            </x-slot>
+                            {{ $prato->description }}
+                        </x-card>
+                    @endforeach
                 </div>
             </div>
         </div>
