@@ -4,7 +4,7 @@
             <div class="sq_parent">
                 <div class="sq_wrap">
                     <div class="sq_content">
-                        <img src="img/demo-bg.jpg" alt="">
+                        <img src="{{ asset('img/demo-bg.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -13,7 +13,7 @@
             <div class="sq_parent">
                 <div class="sq_wrap">
                     <div class="sq_content">
-                        <img src="img/demo-bg.jpg" alt="">
+                        <img src="{{ asset('img/demo-bg.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="sq_parent">
                 <div class="sq_wrap">
                     <div class="sq_content">
-                        <img src="img/demo-bg.jpg" alt="">
+                        <img src="{{ asset('img/demo-bg.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
             <div class="sq_parent">
                 <div class="sq_wrap">
                     <div class="sq_content">
-                        <img src="img/demo-bg.jpg" alt="">
+                        <img src="{{ asset('img/demo-bg.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="sq_parent">
                 <div class="sq_wrap">
                     <div class="sq_content">
-                        <img src="img/demo-bg.jpg" alt="">
+                        <img src="{{ asset('img/demo-bg.jpg') }}" alt="">
                     </div>
                 </div>
             </div>

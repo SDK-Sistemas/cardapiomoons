@@ -29,6 +29,9 @@ Route::middleware([SetLocale::class])->group(function () {
     Route::get('/cardapio/{categoria}', [PageController::class, 'categoria'])
         ->name('categoria');
 
+    Route::get('/cardapio/{categoria}/{prato}', [PageController::class, 'prato'])
+        ->name('prato');
+
     Route::view('/quem-somos', 'quem-somos')
         ->name('quem-somos');
 

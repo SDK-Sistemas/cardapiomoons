@@ -7,7 +7,7 @@
                     Latin literature from 45
                 </p>
                 <div class="controls">
-                    <a href="travel-list-right-sidebar.html" class="link">Ver Todos Os Pratos</a>
+                    <a href="{{ route('cardapio') }}" class="link">Ver Todos Os Pratos</a>
                     <div class="arrows">
                         <div class="arrow prev"></div>
                         <div class="arrow next"></div>

@@ -4,11 +4,6 @@
 
     <div class="breadcrumbs">
         <div class="wrap">
-            <div class="wrap_float">
-                <a href="#">Home</a>
-                <span class="separator">/</span>
-                <a href="#">Travel List Right Sidebar</a>
-            </div>
         </div>
     </div>
     <div class="page contacts-page full-width">
@@ -27,9 +22,10 @@
                     </p>
                 </div>
                 <div class="page_body">
+
                     <div class="contacts-left">
                         <div class="tel">
-                            <a href="#">+ 1909 202 0119</a>
+                            <a href="tel:551434362310">(14) 3436 2310</a>
                             <p>Round the clock support</p>
                         </div>
                         <div class="email">
@@ -48,6 +44,7 @@
                         </div>
                         <a class="btn button js-popup-open" data-href="#contact-us">Contact Us</a>
                     </div>
+
                     <div class="contacts-right">
                         <div class="map">
                             <!--<iframe src=""></iframe>-->

@@ -33,4 +33,11 @@ class PageController extends Controller
             'categoria' => $categoria->load('pratos.images'),
         ]);
     }
+
+    public function prato(Categoria $categoria, Prato $prato)
+    {
+        return view('prato', [
+            'prato' => $prato->load(['images', 'categoria.image']),
+        ]);
+    }
 }
