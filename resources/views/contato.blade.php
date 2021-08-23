@@ -11,43 +11,61 @@
             <div class="wrap_float">
                 <div class="page_head">
                     <h1 class="title">
-                        Let’s have a talk together
+                        {{ __('Fale com nossa equipe') }}
                     </h1>
                     <p class="subtitle">
-                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                        born and I will give you a complete account of the system, and expound the actual teachings of the
-                        great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
-                        avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue
-                        pleasure rationally encounter consequences that are extremely painful.
+                        {{ __('Se você tem uma sugestão ou reclamação manda pra gente por aqui.') }}
                     </p>
                 </div>
                 <div class="page_body">
 
                     <div class="contacts-left">
-                        <div class="tel">
+                        <div class="tel" style="width: 100%">
                             <a href="tel:551434362310">(14) 3436 2310</a>
-                            <p>Round the clock support</p>
                         </div>
                         <div class="email">
-                            <a href="#">info@hellodigi.ru</a>
-                            <p>For any questions</p>
+                            <a href="mailto:contato@moonsrestaurante.com.br">contato@moonsrestaurante.com.br</a>
                         </div>
                         <p class="address">
-                            1355 Digistrict St, Suite 909 San, Francisco, CA 10001 <br>United States
+                            Avenida Marechal Castelo Branco, 55 - CEP: 18.683-430
                         </p>
                         <div class="socials social-links">
-                            <a href="#" class="link facebook"><span></span></a>
-                            <a href="#" class="link instagram"><span></span></a>
-                            <a href="#" class="link pinterest"><span></span></a>
-                            <a href="#" class="link twitter"><span></span></a>
-                            <a href="#" class="link youtube"><span></span></a>
+                            <a href="instagram.com/moons.restaurante" class="link facebook"
+                                target="_blank"><span></span></a>
+                            <a href="facebook.com/moons.restaurante" class="link instagram"
+                                target="_blank"><span></span></a>
                         </div>
-                        <a class="btn button js-popup-open" data-href="#contact-us">Contact Us</a>
+                        {{-- <a class="btn button js-popup-open" data-href="#contact-us">Contact Us</a> --}}
                     </div>
 
                     <div class="contacts-right">
                         <div class="map">
-                            <!--<iframe src=""></iframe>-->
+                            <div class="mapouter">
+                                <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0"
+                                        scrolling="no" marginheight="0" marginwidth="0"
+                                        src="https://maps.google.com/maps?width=717&amp;height=455&amp;hl=en&amp;q=18683-430&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                                        href="https://www.fnfgo.com/">FNF Mods</a></div>
+                                <style>
+                                    .mapouter {
+                                        position: relative;
+                                        text-align: right;
+                                        width: 100%;
+                                        height: 455px;
+                                    }
+
+                                    .gmap_canvas {
+                                        overflow: hidden;
+                                        background: none !important;
+                                        width: 100%;
+                                        height: 455px;
+                                    }
+
+                                    .gmap_iframe {
+                                        height: 455px !important;
+                                    }
+
+                                </style>
+                            </div>
                         </div>
                     </div>
                 </div>
