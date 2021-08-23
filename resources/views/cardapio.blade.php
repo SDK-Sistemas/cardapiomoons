@@ -31,7 +31,7 @@
                                 <a href="{{ route('categoria', $categoria) }}" class="item">
                                     <div class="item_left">
                                         <div class="image"
-                                            style="background-image: url({{ asset('storage/' . $categoria->image->path) }})">
+                                            style="background-image: url({{ asset('storage/' . optional($categoria->image)->path) }})">
                                             <div class="shadow js-shadow"></div>
                                         </div>
                                     </div>

@@ -15,7 +15,7 @@ class CreateCategoriasTable extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('image_id')->constrained()->onDelete('cascade');
+            $table->foreignId('image_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

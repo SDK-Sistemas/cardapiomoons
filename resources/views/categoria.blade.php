@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <div class="image_header" style="background-image: url({{ asset('storage/' . $categoria->image->path) }})"></div>
+    <div class="image_header" style="background-image: url({{ asset('storage/' . optional($categoria->image)->path) }})">
+    </div>
 
     <div class="breadcrumbs white-color">
         <div class="wrap">
@@ -31,7 +32,7 @@
                     <div class="posts">
                         @foreach ($categoria->pratos as $prato)
                             <a href="{{ route('prato', [$categoria, $prato]) }}" class="tour_item"
-                                style="background-image: url({{ asset('storage/' . $prato->images->first()->path) }})">
+                                style="background-image: url({{ asset('storage/' . optional($prato->images->first())->path) }})">
                                 <div class="tour_item_bottom">
                                     <h3 class="_title">{{ $prato->title }}</h3>
                                     <div class="_info">
