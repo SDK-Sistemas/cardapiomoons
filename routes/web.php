@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::middleware([SetLocale::class])->group(function () {
+Route::middleware([SetLocale::class, 'auth'])->group(function () {
 
     Route::get('/', [PageController::class, 'home'])
         ->name('home');

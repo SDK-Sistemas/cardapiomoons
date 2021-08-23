@@ -26,17 +26,17 @@ class Banner extends Model
 
     public function getTitleAttribute()
     {
-        return $this->curr_translation()->title;
+        return $this->curr_translation()->title ?? '';
     }
 
     public function getSubtitleAttribute()
     {
-        return $this->curr_translation()->subtitle;
+        return $this->curr_translation()->subtitle ?? '';
     }
 
     public function getDescriptionAttribute()
     {
-        return $this->curr_translation()->description;
+        return $this->curr_translation()->description ?? '';
     }
 
     public function curr_translation()

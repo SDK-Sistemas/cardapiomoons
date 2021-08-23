@@ -15,10 +15,27 @@ class BannerSeeder extends Seeder
      */
     public function run()
     {
-        Banner::factory()
-            ->times(5)
-            ->for(Image::factory()->forBanner())
-            ->hasTranslations(3)
-            ->create();
+        $arrBanner = [
+            'Nossa orbita quer surpreender seu paladar',
+            'Um prato mais irresistível que o outro',
+            'Nossa cozinha Fusion mistura cores e sabores, venha experimentar.'
+        ];
+
+        foreach ($arrBanner as $item) {
+            $banner = Banner::create();
+
+            $banner->translations()->create([
+                'locale' => 'pt_BR',
+                'translation' => [
+                    'title' => $item
+                ]
+            ]);
+        }
+
+        // Banner::factory()
+        //     ->times(5)
+        //     ->for(Image::factory()->forBanner())
+        //     ->hasTranslations(3)
+        //     ->create();
     }
 }
