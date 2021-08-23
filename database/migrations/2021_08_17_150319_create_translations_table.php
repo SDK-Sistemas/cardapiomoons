@@ -17,7 +17,7 @@ class CreateTranslationsTable extends Migration
             $table->id();
             $table->string('locale');
             $table->morphs('translationable');
-            $table->json('translation');
+            $table->text('translation');
             $table->timestamps();
         });
     }
