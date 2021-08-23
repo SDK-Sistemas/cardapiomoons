@@ -14,7 +14,7 @@ class Storie extends Model
 
     protected $appends = ['title', 'subtitle', 'description'];
 
-    protected $with = ['translations'];
+    protected $with = ['image', 'translations'];
 
     public function image()
     {
@@ -43,13 +43,13 @@ class Storie extends Model
 
     private function curr_translation()
     {
-        $trans = $this->translations()
+        $trans = $this->translations
             ->where('locale', App::currentLocale())
             ->first();
 
         $trans = $trans
             ? $trans->translation
-            : $this->translations()->first()->translation;
+            : $this->translations->first()->translation;
 
         return $trans;
     }

@@ -4,10 +4,10 @@
             <div class="title_wrap">
                 <h2 class="title">Nossos Pratos</h2>
                 <p class="subtitle">
-                    Latin literature from 45
+                    {{ __('A cada escolha, uma experiência inesquecível')}}
                 </p>
                 <div class="controls">
-                    <a href="{{ route('cardapio') }}" class="link">Ver Todos Os Pratos</a>
+                    <a href="{{ route('cardapio') }}" class="link">{{ __('Ver todos')}}</a>
                     <div class="arrows">
                         <div class="arrow prev"></div>
                         <div class="arrow next"></div>

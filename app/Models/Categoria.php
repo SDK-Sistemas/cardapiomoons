@@ -49,13 +49,13 @@ class Categoria extends Model
 
     private function curr_translation()
     {
-        $trans = $this->translations()
+        $trans = $this->translations
             ->where('locale', App::currentLocale())
             ->first();
 
         $trans = $trans
             ? $trans->translation
-            : $this->translations()->first()->translation;
+            : $this->translations->first()->translation;
 
         return $trans;
     }

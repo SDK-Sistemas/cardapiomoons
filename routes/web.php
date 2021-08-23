@@ -38,7 +38,6 @@ Route::middleware([SetLocale::class])->group(function () {
     Route::view('/contato', 'contato')
         ->name('contato');
 
-
     Route::view('/reservas', 'reservas')
         ->name('reservas');
 });

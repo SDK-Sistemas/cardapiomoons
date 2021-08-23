@@ -12,7 +12,7 @@ class Banner extends Model
 
     protected $appends = ['title', 'subtitle', 'description'];
 
-    protected $with = ['translations'];
+    protected $with = ['image', 'translations'];
 
     public function image()
     {
@@ -39,15 +39,15 @@ class Banner extends Model
         return $this->curr_translation()->description;
     }
 
-    private function curr_translation()
+    public function curr_translation()
     {
-        $trans = $this->translations()
+        $trans = $this->translations
             ->where('locale', App::currentLocale())
             ->first();
 
         $trans = $trans
             ? $trans->translation
-            : $this->translations()->first()->translation;
+            : $this->translations->first()->translation;
 
         return $trans;
     }
