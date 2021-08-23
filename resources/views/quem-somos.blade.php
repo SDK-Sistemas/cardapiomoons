@@ -10,14 +10,12 @@
         <div class="wrap">
             <div class="wrap_float">
                 <div class="gallery-page-head">
-                    <p class="country">Australia</p>
-                    <h1 class="title">Beautiful birds of Australia</h1>
+                    <h1 class="title">
+                        {{ __('Diferente por natureza') }}
+                    </h1>
                     <div class="subtitle">
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                            sit aspernatur aut odit aut fugit
+                            {{ __('O moons chegou para oferecer ao público uma experiência digna dos grandes centros urbanos. A culinária Fusion mistura ingredientes e sabors') }}
                         </p>
                     </div>
                 </div>

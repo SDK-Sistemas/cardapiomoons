@@ -11836,6 +11836,11 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (max-width: 640px) {
+
+    .top_panel .center .menu ul li a.active:before {
+        display: none;
+    }
+
   .page_404 .error {
     font-size: 93px;
   }
@@ -11863,3 +11868,18 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
     top: 20px;
   }
 }
+
+.btn_reserva{
+    height: 48px;
+    background: #D03000;
+    border-radius: 8px;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    display: block;
+    float: left;
+    line-height: 48px;
+    width: auto;
+    margin-top: 70px;
+  }

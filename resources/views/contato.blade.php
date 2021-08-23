@@ -23,19 +23,19 @@
                         <div class="tel" style="width: 100%">
                             <a href="tel:551434362310">(14) 3436 2310</a>
                         </div>
-                        <div class="email">
-                            <a href="mailto:contato@moonsrestaurante.com.br">contato@moonsrestaurante.com.br</a>
+                        <div class="email" style="font-size: 10px">
+                            <a href="mailto:contato@moonsrestaurante.com.br"
+                                style="font-size: 18px">contato@moonsrestaurante.com.br</a>
                         </div>
                         <p class="address">
                             Avenida Marechal Castelo Branco, 55 - CEP: 18.683-430
                         </p>
-                        <div class="socials social-links">
+                        <div class="socials social-links" style="justify-content: flex-start">
                             <a href="instagram.com/moons.restaurante" class="link facebook"
                                 target="_blank"><span></span></a>
                             <a href="facebook.com/moons.restaurante" class="link instagram"
                                 target="_blank"><span></span></a>
                         </div>
-                        {{-- <a class="btn button js-popup-open" data-href="#contact-us">Contact Us</a> --}}
                     </div>
 
                     <div class="contacts-right">
@@ -43,8 +43,8 @@
                             <div class="mapouter">
                                 <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0"
                                         scrolling="no" marginheight="0" marginwidth="0"
-                                        src="https://maps.google.com/maps?width=717&amp;height=455&amp;hl=en&amp;q=18683-430&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-                                        href="https://www.fnfgo.com/">FNF Mods</a></div>
+                                        src="https://maps.google.com/maps?width=717&amp;height=455&amp;hl=en&amp;q=18683-430&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                </div>
                                 <style>
                                     .mapouter {
                                         position: relative;

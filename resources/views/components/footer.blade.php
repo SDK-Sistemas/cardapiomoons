@@ -60,9 +60,9 @@
                         </div>
                     </div>
                     <div class="socials social-links">
-                        <a href="instagram.com/moons.restaurante" class="link facebook"
+                        <a href="https://www.facebook.com/moons.restaurante" class="link facebook"
                             target="_blank"><span></span></a>
-                        <a href="facebook.com/moons.restaurante" class="link instagram"
+                        <a href="https://www.instagram.com/moons.restaurante" class="link instagram"
                             target="_blank"><span></span></a>
                     </div>
                 </div>

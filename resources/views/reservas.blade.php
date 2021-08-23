@@ -11,24 +11,21 @@
         <div class="about-us">
             <div class="wrap">
                 <div class="wrap_float">
-                    <h1 class="title">About Us</h1>
-                    <p class="description">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                    </p>
+                    <h1 class="title">{{ __('Reservas') }}</h1>
                     <p class="text">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                        {{ __('Você pode fazer sua reserva diretamente pelo nosso sistema e já garantir sua mesa para o horário desejado, de forma simples e prática. Basta clicar no botão abaixo e será direcionado para para a tela de reservas.') }}
                     </p>
-                    <div class="image-block">
-                        <button>Reserve</button>
+                    <div style="display: flex; justify-content: center; margin-bottom: 120px">
+                        <button class="btn_reserva getin-widget-button" data-partner="xkKM3B1w">
+                            {{ __('Fazer Reserva') }}
+                        </button>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <script async type="text/javascript" src="https://widget.getinapp.com.br/loader.js"></script>
 
-    @endsection
+@endsection

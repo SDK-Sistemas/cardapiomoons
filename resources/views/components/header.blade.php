@@ -66,11 +66,12 @@
                                     <a href="tel:+5501434362310">(14) 3436 2310</a>
                                 </div>
                                 <div class="social">
-                                    <a href="#" class="link facebook"><span></span></a>
-                                    <a href="#" class="link instagram"><span></span></a>
-                                    <a href="#" class="link pinterest"><span></span></a>
-                                    <a href="#" class="link twitter"><span></span></a>
-                                    <a href="#" class="link youtube"><span></span></a>
+
+                                    <a href="https://www.facebook.com/moons.restaurante" class="link facebook"
+                                        target="_blank"><span></span></a>
+                                    <a href="https://www.instagram.com/moons.restaurante" class="link instagram"
+                                        target="_blank"><span></span></a>
+
                                 </div>
                             </div>
                             {{-- /Menu mobile --}}
