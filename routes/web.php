@@ -38,12 +38,13 @@ Route::middleware([SetLocale::class])->group(function () {
     Route::view('/contato', 'contato')
         ->name('contato');
 
+
     Route::view('/reservas', 'reservas')
         ->name('reservas');
 });
 
 Route::post('/lang', function (Request $request) {
-    Session::put('lang', $request->locale);
+    Session::put('lang', $request->lang);
     return back();
 })->name('lang');
 
