@@ -18,9 +18,6 @@
                         <h1 class="title">
                             {{ __('Cárdapio') }}
                         </h1>
-                        <p class="subtitle">
-                            Latin literature from 45 BC, making it over 2000 years old
-                        </p>
                     </div>
                 </div>
             </div>
@@ -74,8 +71,5 @@
             </div>
         </div>
     </div>
-
-    <x-newsletter>
-    </x-newsletter>
 
 @endsection

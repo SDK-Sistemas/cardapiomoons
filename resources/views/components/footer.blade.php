@@ -45,25 +45,25 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div class="_title">Contacts</div>
+                    <div class="_title">{{ __('Contato') }}</div>
                     <div class="contacts_info">
                         <div class="tel">
-                            <a href="tel:+5501434362310">(14) 3436 2310</a>
+                            <a href="tel:+5501434362310">
+                                (14) 3436 2310
+                            </a>
                         </div>
                         <div class="email">
-                            <a href="mailto:info@hellodigi.ru">info@hellodigi.ru</a>
-                            <p>For any questions</p>
+                            <a href="mailto:contato@moonsrestaurante.com.br">contato@moonsrestaurante.com.br</a>
                         </div>
                         <div class="address">
-                            1355 Digistrict St, Suite 909 San, Francisco, CA 10001 <br> United States
+                            Avenida Marechal Castelo Branco, 55 - CEP: 18.683-430
                         </div>
                     </div>
                     <div class="socials social-links">
-                        <a href="#" class="link facebook"><span></span></a>
-                        <a href="#" class="link instagram"><span></span></a>
-                        <a href="#" class="link pinterest"><span></span></a>
-                        <a href="#" class="link twitter"><span></span></a>
-                        <a href="#" class="link youtube"><span></span></a>
+                        <a href="instagram.com/moons.restaurante" class="link facebook"
+                            target="_blank"><span></span></a>
+                        <a href="facebook.com/moons.restaurante" class="link instagram"
+                            target="_blank"><span></span></a>
                     </div>
                 </div>
             </div>

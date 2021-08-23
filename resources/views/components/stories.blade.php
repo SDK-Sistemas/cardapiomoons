@@ -2,12 +2,12 @@
     <div class="wrap">
         <div class="wrap_float">
             <div class="title_wrap">
-                <h2 class="title">Stories</h2>
+                <h2 class="title">{{ __('Pelo olhar dos clientes') }}</h2>
                 <p class="subtitle">
-                    Watch and be inspired
+                    {{ __('As fotos neste espaço foram tiradas pelos nossos clientes, atestando a experiência Moons.') }}
                 </p>
                 <div class="controls">
-                    <a href="stories-right-sidebar.html" class="link">All Stories</a>
+                    <a href="stories-right-sidebar.html" class="link">{{ __('Ver mais') }}</a>
                     <div class="arrows">
                         <div class="arrow prev"></div>
                         <div class="arrow next"></div>

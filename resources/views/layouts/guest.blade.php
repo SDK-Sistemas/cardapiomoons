@@ -40,9 +40,6 @@
 
         @yield('content')
 
-        <x-instagram-grid>
-        </x-instagram-grid>
-
         <x-footer>
         </x-footer>
 

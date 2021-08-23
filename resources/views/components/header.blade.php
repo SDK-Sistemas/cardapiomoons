@@ -1,12 +1,11 @@
-<div class="top_panel @if (in_array(Route::currentRouteName(), ['cardapio', 'contato' , 'reservas'
-    ])) inversion @endif">
+<div class="top_panel @if (in_array(Route::currentRouteName(), ['cardapio', 'contato', 'reservas'])) inversion @endif">
     <div class="wrap">
         <div class="wrap_float">
 
             <x-select-locale></x-select-locale>
 
             <div class="left">
-                <div class="search_btn"></div>
+                {{-- <div class="search_btn"></div> --}}
                 <a href="{{ route('home') }}" class="logo">
                     <img src="img/logo.png" alt="">
                 </a>

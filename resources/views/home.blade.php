@@ -11,7 +11,4 @@
     <x-stories :stories="$stories">
     </x-stories>
 
-    <x-newsletter>
-    </x-newsletter>
-
 @endsection
