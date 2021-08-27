@@ -3,25 +3,27 @@
 @section('content')
 
 
-    {{-- Breadcrumbs --}}
-    <div class="breadcrumbs">
-        <div class="wrap">
-        </div>
-    </div>
-    {{-- /Breadcrumbs --}}
+
 
     <div class="tour_page right-sidebar">
 {{--        <div class="bg-image" style="background-image: url({{ asset('storage/' . optional($prato->categoria->image)->path) }})">--}}
 
 {{--        </div>--}}
-        <div class="tour_page_head">
+        {{-- Breadcrumbs --}}
+        <div class="breadcrumbs">
+            <div class="wrap">
+            </div>
+        </div>
+        {{-- /Breadcrumbs --}}
+
+        <div class="tour_page_head" style="background-image: url({{
+                asset('storage/' . optional($prato->categoria->image)->path)
+            }});">
 
 
 
             {{-- Banner --}}
-            <div class="header_content" id="head" style="background-image: url({{
-                    asset('storage/' . optional($prato->categoria->image)->path)
-                }});">
+            <div class="header_content" id="head">
                 <div class="wrap">
                     <div class="wrap_float">
                         <div class="top-info">
