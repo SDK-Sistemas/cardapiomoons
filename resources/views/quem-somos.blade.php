@@ -21,30 +21,24 @@
                 </div>
                 <div class="gallery-page-body">
                     <div class="image-list lightgallery">
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/1.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/1.png')}}" alt="">
                         </a>
-
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/2.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/2.png')}}" alt="">
                         </a>
-
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/3.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/3.png')}}" alt="">
                         </a>
-
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/4.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/4.png')}}" alt="">
                         </a>
-
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/5.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/5.png')}}" alt="">
                         </a>
-
-                        <a href="img/demo-bg.jpg" class="image-item">
-                            <img src="img/demo-bg.jpg" alt="">
+                        <a href="{{asset('storage/quem-somos/6.png')}}" class="image-item">
+                            <img src="{{asset('storage/quem-somos/6.png')}}" alt="">
                         </a>
-
                     </div>
                 </div>
             </div>

@@ -20,19 +20,30 @@ class BannerSeeder extends Seeder
     public function run(): void
     {
         $arr_banner = [
-            'Nossa orbita quer surpreender seu paladar',
-            'Um prato mais irresistível que o outro',
-            'Nossa cozinha Fusion mistura cores e sabores, venha experimentar.'
+            [
+                'title' => 'Atmosfera',
+                'text' => 'Novo ambiente para surpreender seu paladar'
+            ],
+            [
+                'title' => 'Fusion',
+                'text' => 'Culinária Fusion que mistura ingredientes e sabores'
+            ],
+            [
+                'title' => 'Sincronia',
+                'text' => 'Sons, cores e texturas em perfeita harmonia'
+            ],
+            [
+                'title' => 'Descoberta',
+                'text' => 'Descubra novos gostos e viva momentos inesquecíveis'
+            ],
         ];
 
-        foreach ($arr_banner as $banner_text) {
+        foreach ($arr_banner as $banner_trans) {
             $banner = Banner::create();
 
             $banner->translations()->create([
                 'locale' => 'pt_BR',
-                'translation' => [
-                    'text' => $banner_text
-                ]
+                'translation' => $banner_trans
             ]);
         }
     }

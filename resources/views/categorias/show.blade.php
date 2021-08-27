@@ -36,7 +36,7 @@
                                     asset('storage/' . optional($prato->images->first())->path)
                                 }});">
                                 <div class="tour_item_bottom">
-                                    <h3 class="_title">{{ $prato->title }}</h3>
+                                    <h3 class="_title">{{ $prato->name }}</h3>
                                     <div class="_info">
                                         <div class="_info_left">
                                             {{-- <div class="days">5 days |</div> --}}
