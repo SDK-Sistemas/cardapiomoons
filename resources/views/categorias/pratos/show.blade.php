@@ -15,7 +15,9 @@
             {{-- /Breadcrumbs --}}
 
             {{-- Banner --}}
-            <div class="header_content" id="head">
+            <div class="header_content" id="head" style="background-image: url({{
+                    asset('storage/' . optional($prato->categoria->image)->path)
+                }});">
                 <div class="wrap">
                     <div class="wrap_float">
                         <div class="top-info">

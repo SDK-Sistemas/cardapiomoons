@@ -68,11 +68,10 @@
                 </div>
             </div>
             <div class="footer_bottom">
-                <div class="left">
-                    <a href="#">Privacy Policy</a>
-                </div>
                 <div class="right">
-                    Copyright © 2019 by Digistrict
+                    <a href="https://www.atitudecomunicacao.com.br">
+                        <img src="{{asset('img/atitude.png')}}" alt="">
+                    </a>
                 </div>
             </div>
         </div>
