@@ -1,7 +1,7 @@
 <form action="{{ route('lang') }}" method="POST" class="currency_mob">
     @csrf
     <select name="lang" onchange="this.form.submit()">
-        @foreach (['pt', 'en', 'es'] as $locale)
+        @foreach (['pt', 'us', 'es'] as $locale)
             <option {{ App::isLocale($locale) ? 'selected' : '' }}>
                 {{ $locale }}
             </option>
