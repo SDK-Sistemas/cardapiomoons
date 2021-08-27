@@ -484,4 +484,136 @@ al horno, arancini de calabaza y coulis de pimientorojo ahumado'
             ],
         ]
     ],
+    /**
+     * Sobremesas
+     */
+    [
+        'traducoes' => [
+            'pt_BR' => 'Sobremesas',
+            'us'=>  'Desserts',
+            'es' => 'Sobremesas',
+        ],
+        'pratos' => [
+            /**
+             * Brownie
+             */
+            [
+                'price' => 33.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Brownie',
+                        'description' => 'Tradicional bolo úmido de chocolate com sorvetefeito em casa.'
+                    ],
+                    'us' => [
+                        'name' => 'Brownie',
+                        'description' => 'Chocolate brownie with homemade ice cream'
+                    ],
+                    'es' => [
+                        'name' => 'Brownie',
+                        'description' => 'Brownie de chocolate con helado casero'
+                    ]
+                ]
+            ],
+            /**
+             * Alfajor brulle
+             */
+            [
+                'price' => 18.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Alfajor brulle',
+                        'description' => 'Suave Bolacha de maisena que desmancha na bocarecheadas com creme brulle'
+                    ],
+                    'us' => [
+                        'name' => 'Alfajor brulle',
+                        'description' => 'Very delicated alfajor filled with crème brüllée'
+                    ],
+                    'es' => [
+                        'name' => 'Alfajor brulle',
+                        'description' => 'Alfajor muy delicado relleno de crema brüllée'
+                    ]
+                ]
+            ],
+            /**
+             * Doçura Dupla
+             */
+            [
+                'price' => 30.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Doçura Dupla',
+                        'description' => 'Suspiro limeño e sorvete de quinoa e pralinede castanha caju.'
+                    ],
+                    'us' => [
+                        'name' => 'Doçura Dupla',
+                        'description' => 'Lima Meringue with quinoa ice cream and Braziliannuts praline'
+                    ],
+                    'es' => [
+                        'name' => 'Doçura Dupla',
+                        'description' => 'Merengue de Lima con helado de quinua y pralinéde nueces brasileñas'
+                    ]
+                ]
+            ],
+            /**
+             * Cheesecake
+             */
+            [
+                'price' => 33.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Cheesecake',
+                        'description' => 'Feito com limão siciliano com geleia de amora.'
+                    ],
+                    'us' => [
+                        'name' => 'Cheesecake',
+                        'description' => 'Lemon cheesecake with blackberry jam'
+                    ],
+                    'es' => [
+                        'name' => 'Cheesecake',
+                        'description' => 'Tarta de queso de limón con mermelada de moras'
+                    ]
+                ]
+            ],
+            /**
+             * Canoli crepe
+             */
+            [
+                'price' => 24.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Canoli Crepe',
+                        'description' => 'Recheio com queijo ricota, chocolate e pistache.'
+                    ],
+                    'us' => [
+                        'name' => 'Canoli Crepe',
+                        'description' => 'Canoli Crepe filled with ricotta cheese, chocolateand pistachios crumbs'
+                    ],
+                    'es' => [
+                        'name' => 'Crepe de cannoli',
+                        'description' => 'Crepe de cannoli relleno de queso ricotta, chocolatey migas de pistachos'
+                    ]
+                ]
+            ],
+            /**
+             * Salada de frutas
+             */
+            [
+                'price' => 19.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Salada de frutas',
+                        'description' => 'Servida com suco de laranja com aromas de hortelãe canela.'
+                    ],
+                    'us' => [
+                        'name' => 'Season fruit salad',
+                        'description' => 'Season fruit salad with orange juice and a pinchof cinnamon and a leaf of mint'
+                    ],
+                    'es' => [
+                        'name' => 'Sazone la ensalada de frutas',
+                        'description' => 'Sazone la ensalada de frutas con jugo de naranjay una pizca de canela y una hoja de menta.'
+                    ]
+                ]
+            ],
+        ]
+    ]
 ];

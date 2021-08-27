@@ -1,4 +1,6 @@
 <?php
+/** @noinspection ALL */
+declare(strict_types=1);
 
 namespace Database\Seeders;
 
@@ -8,6 +10,9 @@ use App\Models\Banner;
 use App\Models\Categoria;
 use Illuminate\Database\Seeder;
 
+/**
+ *
+ */
 class CardapioSeeder extends Seeder
 {
     /**
@@ -17,28 +22,33 @@ class CardapioSeeder extends Seeder
      */
     public function run()
     {
-        $arrCategorias = include '_dadosCardapio.php';
+        /** @noinspection UntrustedInclusionInspection */
+        $arr_categorias = include '_dadosCardapio.php';
 
-        foreach ($arrCategorias as $categoria) {
+        foreach ($arr_categorias as $categoria) {
+
             $cat = Categoria::create();
 
-            $cat->translations()->create([
-                'locale'      => 'pt_BR',
-                'translation' => [
-                    'name' => $categoria['name']
-                ]
-            ]);
+            foreach ($categoria['traducoes'] as $key => $value){
+                $cat->translations()->create([
+                    'locale'      => $key,
+                    'translation' => ['name' => $value]
+                ]);
+            }
 
             foreach ($categoria['pratos'] as $prato) {
+
                 $dish = Prato::create([
                     'categoria_id' => $cat->id,
-                    'price'        => 0
+                    'price'        => $prato['price']
                 ]);
 
-                $dish->translations()->create([
-                    'locale'      => 'pt_BR',
-                    'translation' => $prato
-                ]);
+                foreach ($prato['traducoes'] as $key => $value){
+                    $dish->translations()->create([
+                        'locale'      => $key,
+                        'translation' => $value
+                    ]);
+                }
             }
         }
     }
