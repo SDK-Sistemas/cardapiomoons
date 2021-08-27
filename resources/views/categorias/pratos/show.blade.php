@@ -9,18 +9,18 @@
 {{--        <div class="bg-image" style="background-image: url({{ asset('storage/' . optional($prato->categoria->image)->path) }})">--}}
 
 {{--        </div>--}}
-        {{-- Breadcrumbs --}}
-        <div class="breadcrumbs">
-            <div class="wrap">
-            </div>
-        </div>
-        {{-- /Breadcrumbs --}}
+
 
         <div class="tour_page_head" style="background-image: url({{
                 asset('storage/' . optional($prato->categoria->image)->path)
             }});">
 
-
+            {{-- Breadcrumbs --}}
+            <div class="breadcrumbs">
+                <div class="wrap">
+                </div>
+            </div>
+            {{-- /Breadcrumbs --}}
 
             {{-- Banner --}}
             <div class="header_content" id="head">
