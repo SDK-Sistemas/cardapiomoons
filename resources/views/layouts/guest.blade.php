@@ -35,8 +35,7 @@
 <body>
     <div class="container">
 
-        <x-header>
-        </x-header>
+        @component('header')
 
         @yield('content')
 
