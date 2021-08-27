@@ -15,6 +15,7 @@ class CreateCategoriasTable extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
+            $table->integer('order')->default(0)->comment('Ordem que as categorias aparecem');
             $table->foreignId('image_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });

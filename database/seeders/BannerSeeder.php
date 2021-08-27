@@ -1,41 +1,39 @@
 <?php
+declare(strict_types=1);
 
 namespace Database\Seeders;
 
-use App\Models\Image;
 use App\Models\Banner;
 use Illuminate\Database\Seeder;
 
+/**
+ *
+ */
 class BannerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
+     * @noinspection PhpMethodNamingConventionInspection
      */
-    public function run()
+    public function run(): void
     {
-        $arrBanner = [
+        $arr_banner = [
             'Nossa orbita quer surpreender seu paladar',
             'Um prato mais irresistível que o outro',
             'Nossa cozinha Fusion mistura cores e sabores, venha experimentar.'
         ];
 
-        foreach ($arrBanner as $item) {
+        foreach ($arr_banner as $banner_text) {
             $banner = Banner::create();
 
             $banner->translations()->create([
                 'locale' => 'pt_BR',
                 'translation' => [
-                    'title' => $item
+                    'text' => $banner_text
                 ]
             ]);
         }
-
-        // Banner::factory()
-        //     ->times(5)
-        //     ->for(Image::factory()->forBanner())
-        //     ->hasTranslations(3)
-        //     ->create();
     }
 }

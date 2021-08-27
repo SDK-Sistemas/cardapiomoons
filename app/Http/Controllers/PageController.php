@@ -35,8 +35,6 @@ class PageController extends Controller
      */
     public function prato(Categoria $categoria, Prato $prato)
     {
-        return view('prato', [
-            'prato' => $prato->load(['images', 'categoria.image']),
-        ]);
+
     }
 }

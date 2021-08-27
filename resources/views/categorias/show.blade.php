@@ -16,7 +16,7 @@
                 <div class="wrap">
                     <div class="wrap_float">
                         <h1 class="title">
-                            {{ $categoria->title }}
+                            {{ $categoria->name }}
                         </h1>
                         <p class="subtitle">
                             {{ $categoria->description }}
@@ -32,7 +32,9 @@
                     <div class="posts">
                         @foreach ($categoria->pratos as $prato)
                             <a href="{{ route('prato', [$categoria, $prato]) }}" class="tour_item"
-                                style="background-image: url({{ asset('storage/' . optional($prato->images->first())->path) }})">
+                                style="background-image: url({{
+                                    asset('storage/' . optional($prato->images->first())->path)
+                                }});">
                                 <div class="tour_item_bottom">
                                     <h3 class="_title">{{ $prato->title }}</h3>
                                     <div class="_info">
@@ -50,8 +52,5 @@
             </div>
         </div>
     </div>
-
-    <x-newsletter>
-    </x-newsletter>
 
 @endsection

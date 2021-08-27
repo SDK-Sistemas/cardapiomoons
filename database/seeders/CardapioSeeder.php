@@ -25,7 +25,7 @@ class CardapioSeeder extends Seeder
             $cat->translations()->create([
                 'locale'      => 'pt_BR',
                 'translation' => [
-                    'title' => $categoria['title']
+                    'name' => $categoria['name']
                 ]
             ]);
 

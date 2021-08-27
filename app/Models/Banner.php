@@ -11,12 +11,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property mixed translations
+ * @method static create()
  */
 class Banner extends Model
 {
     use HasFactory;
 
-    protected $currTrans;
+    protected object $currTrans;
 
     protected $appends = ['title', 'tagline', 'text'];
 

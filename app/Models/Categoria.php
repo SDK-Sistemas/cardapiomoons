@@ -5,58 +5,90 @@ namespace App\Models;
 use App\Models\Image;
 use App\Models\Prato;
 use App\Models\Translation;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ *
+ * @property mixed translations
+ */
 class Categoria extends Model
 {
     use HasFactory;
+
+    protected object $currTrans;
 
     protected $appends = ['title', 'subtitle', 'description'];
 
     protected $with = ['translations'];
 
-    public function image()
+    /**
+     * Perform any actions required after the model boots.
+     *
+     * @return void
+     */
+    protected static function boot(): void
+    {
+        Parent::boot();
+        static::retrieved(function ($prato) {
+            $prato->currTrans = $prato->getCurrTrans();
+        });
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function image(): BelongsTo
     {
         return $this->belongsTo(Image::class);
     }
 
-    public function pratos()
+    /**
+     * @return HasMany
+     */
+    public function pratos(): HasMany
     {
         return $this->hasMany(Prato::class);
     }
 
-    public function translations()
+    /**
+     * @return MorphMany
+     */
+    public function translations(): MorphMany
     {
         return $this->morphMany(Translation::class, 'translationable');
     }
 
-    public function getTitleAttribute()
+    /**
+     * @return string
+     */
+    public function getNameAttribute(): string
     {
-        return $this->curr_translation()->title ?? '';
+        return $this->currTrans->name ?? '';
     }
 
-    public function getSubtitleAttribute()
+    /**
+     * @return string
+     * @noinspection PhpMethodNamingConventionInspection
+     */
+    public function getDescriptionAttribute(): string
     {
-        return $this->curr_translation()->subtitle ?? '';
+        return $this->currTrans->description ?? '';
     }
 
-    public function getDescriptionAttribute()
-    {
-        return $this->curr_translation()->description ?? '';
-    }
-
-    private function curr_translation()
+    /**
+     *  Set the current translation the model will use
+     */
+    private function getCurrTrans()
     {
         $trans = $this->translations
             ->where('locale', App::currentLocale())
             ->first();
 
-        $trans = $trans
-            ? $trans->translation
-            : $this->translations->first()->translation;
-
-        return $trans;
+        return $trans->translation ?? $this->translations->first()->translation;
     }
 }
