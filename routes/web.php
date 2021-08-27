@@ -1,11 +1,16 @@
 <?php
+declare(strict_types=1);
 
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ChangeLanguageController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
-use Inertia\Inertia;
-use Illuminate\Http\Request;
+use App\Http\Controllers\PratoController;
 use App\Http\Middleware\SetLocale;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,19 +23,14 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
+
+Route::post('/', ChangeLanguageController::class)
+    ->name('lang');
+
 Route::middleware([SetLocale::class])->group(function () {
 
-    Route::get('/', [PageController::class, 'home'])
+    Route::get('/', HomeController::class)
         ->name('home');
-
-    Route::get('/cardapio', [PageController::class, 'cardapio'])
-        ->name('cardapio');
-
-    Route::get('/cardapio/{categoria}', [PageController::class, 'categoria'])
-        ->name('categoria');
-
-    Route::get('/cardapio/{categoria}/{prato}', [PageController::class, 'prato'])
-        ->name('prato');
 
     Route::view('/quem-somos', 'quem-somos')
         ->name('quem-somos');
@@ -40,12 +40,20 @@ Route::middleware([SetLocale::class])->group(function () {
 
     Route::view('/reservas', 'reservas')
         ->name('reservas');
+
+    Route::prefix('/cardapio')->group( function () {
+
+        Route::get('/', [CategoriaController::class, 'index'])
+            ->name('cardapio');
+
+        Route::get('/{categoria}', [CategoriaController::class, 'show'])
+            ->name('categoria');
+
+        Route::get('/{categoria}/{prato}', [PratoController::class, 'show'])
+            ->name('prato');
+    });
 });
 
-Route::post('/lang', function (Request $request) {
-    Session::put('lang', $request->lang);
-    return back();
-})->name('lang');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

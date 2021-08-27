@@ -8,7 +8,9 @@
     <x-popular :pratos="$pratos">
     </x-popular>
 
-    <x-stories :stories="$stories">
-    </x-stories>
+    @if($stories->isEmpty() === false)
+        <x-stories :stories="$stories">
+        </x-stories>
+    @endif
 
 @endsection

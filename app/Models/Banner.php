@@ -1,54 +1,92 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @property mixed translations
+ */
 class Banner extends Model
 {
     use HasFactory;
 
-    protected $appends = ['title', 'subtitle', 'description'];
+    protected $currTrans;
+
+    protected $appends = ['title', 'tagline', 'text'];
 
     protected $with = ['image', 'translations'];
 
-    public function image()
+    /**
+     * Perform any actions required after the model boots.
+     *
+     * @return void
+     */
+    protected static function boot(): void
+    {
+        Parent::boot();
+        static::retrieved(function ($banner) {
+            $banner->currTrans = $banner->getCurrTrans();
+        });
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function image(): BelongsTo
     {
         return $this->belongsTo(Image::class);
     }
 
-    public function translations()
+    /**
+     * @return MorphMany
+     */
+    public function translations(): MorphMany
     {
         return $this->morphMany(Translation::class, 'translationable');
     }
 
-    public function getTitleAttribute()
+    /**
+     * @return string
+     * @noinspection PhpMethodNamingConventionInspection
+     */
+    public function getTitleAttribute(): string
     {
-        return $this->curr_translation()->title ?? '';
+        return $this->currTrans->title ?? '';
     }
 
-    public function getSubtitleAttribute()
+    /**
+     * @return string
+     * @noinspection PhpMethodNamingConventionInspection
+     */
+    public function getTaglineAttribute(): string
     {
-        return $this->curr_translation()->subtitle ?? '';
+        return $this->currTrans->tagline ?? '';
     }
 
-    public function getDescriptionAttribute()
+    /**
+     * @return string
+     * @noinspection PhpMethodNamingConventionInspection
+     */
+    public function getTextAttribute(): string
     {
-        return $this->curr_translation()->description ?? '';
+        return $this->currTrans->text ?? '';
     }
 
-    public function curr_translation()
+    /**
+     *  Set the current translation the model will use
+     */
+    private function getCurrTrans()
     {
         $trans = $this->translations
             ->where('locale', App::currentLocale())
             ->first();
 
-        $trans = $trans
-            ? $trans->translation
-            : $this->translations->first()->translation;
-
-        return $trans;
+        return $trans->translation ?? $this->translations->first()->translation;
     }
 }
