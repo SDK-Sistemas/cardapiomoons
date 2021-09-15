@@ -15,7 +15,7 @@
                     </h1>
                     <div class="subtitle">
                         <p>
-                            {{ __('O moons chegou para oferecer ao público uma experiência digna dos grandes centros urbanos. A culinária Fusion mistura ingredientes e sabors') }}
+                            {{ __('O moons chegou para oferecer ao público uma experiência digna dos grandes centros urbanos. A culinária Fusion mistura ingredientes e sabores') }}
                         </p>
                     </div>
                 </div>
