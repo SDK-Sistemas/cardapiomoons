@@ -1,6 +1,19 @@
-{
-    "Cardápio": "Menu",
-    "Quem Somos": "About Us",
-    "Contato": "Contact",
-    "Reservas": "Reservations"
+{ 
+    "Home": "Home", 
+    "Cardápio": "Menu", 
+    "Quem Somos": "About Us", 
+    "Contato": "Contact", 
+    "Reservas": "Reservations", 
+    "Links Rápidos": "Menu", 
+    "A cada escolha, uma experiência inesquecível": "Flavours and Experiences", 
+    "Ver todos": "See all", 
+    "Escolha seu idioma.":"Choose your language", 
+    "Pelo olhar dos clientes": "By your side", 
+    "As fotos neste espaço foram tiradas pelos nossos clientes, atestando a experiência Moons." : "Pictures by customers", 
+    "Ver mais": "See more", 
+    "Fale com nossa equipe": "Talk with us", 
+    "Se você tem uma sugestão ou reclamação manda pra gente por aqui.": "Do you have any question or suggestions? ", 
+    "Dashboard": "Dashboard", 
+    "Nossos Pratos": "Our dishes", 
+    "Detalhes": "Details" 
 }

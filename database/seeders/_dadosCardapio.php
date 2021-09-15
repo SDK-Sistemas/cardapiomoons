@@ -615,5 +615,104 @@ al horno, arancini de calabaza y coulis de pimientorojo ahumado'
                 ]
             ],
         ]
-    ]
+    ],
+    /**
+     * Bebidas
+     */
+    [
+        'traducoes' => [
+            'pt_BR' => 'Bebidas',
+            'us'=>  'Drinks',
+            'es' => 'Bebidas',
+        ],
+        'pratos' => [
+            /**
+             * Bebidas
+             */
+            [
+                'price' => 25.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Bebidas',
+                        'description' => ''
+                    ],
+                    'us' => [
+                        'name' => 'Drinks',
+                        'description' => ''
+                    ],
+                    'es' => [
+                        'name' => 'Bebidas',
+                        'description' => ''
+                    ]
+                ]
+
+            ]
+        ]
+    ],
+    /**
+     * Drinks
+     */
+    [
+        'traducoes' => [
+            'pt_BR' => 'Drinks',
+            'us'=>  'Cocktails',
+            'es' => 'Drinks',
+        ],
+        'pratos' => [
+            /**
+             * Drinks
+             */
+            [
+                'price' => 25.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Drinks',
+                        'description' => ''
+                    ],
+                    'us' => [
+                        'name' => 'Cocktails',
+                        'description' => ''
+                    ],
+                    'es' => [
+                        'name' => 'Drinks',
+                        'description' => ''
+                    ]
+                ]
+
+            ]
+        ]
+    ],
+    /**
+     * Vinhos
+     */
+    [
+        'traducoes' => [
+            'pt_BR' => 'Vinhos',
+            'us'=>  'Wine',
+            'es' => 'Vinhos',
+        ],
+        'pratos' => [
+            /**
+             * Vinhos
+             */
+            [
+                'price' => 25.00,
+                'traducoes' => [
+                    'pt_BR' => [
+                        'name' => 'Vinhos',
+                        'description' => ''
+                    ],
+                    'us' => [
+                        'name' => 'Wine',
+                        'description' => ''
+                    ],
+                    'es' => [
+                        'name' => 'Vinhos',
+                        'description' => ''
+                    ]
+                ]
+
+            ]
+        ]
+    ],
 ];

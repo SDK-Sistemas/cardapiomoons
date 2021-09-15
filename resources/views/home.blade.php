@@ -38,7 +38,7 @@
         <div class="wrap">
             <div class="wrap_float">
                 <div class="title_wrap">
-                    <h2 class="title">Nossos Pratos</h2>
+                    <h2 class="title">{{ __('Nossos Pratos') }}</h2>
                     <p class="subtitle">
                         {{ __('A cada escolha, uma experiência inesquecível') }}
                     </p>
