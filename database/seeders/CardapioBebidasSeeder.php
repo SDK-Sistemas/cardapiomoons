@@ -40,15 +40,13 @@ class CardapioBebidasSeeder extends Seeder
                 $cat = Categoria::findOrFail( $categoria['categoria']['id'] );
             }
 
-            foreach ($categoria['categoria']['fotos'] as $foto){
+            $img = Image::firstOrCreate(
+                ['path' => $categoria['categoria']['foto'] ],
+                ['alt' => '']
+            );
 
-                $img = Image::firstOrCreate(
-                    ['path' => $foto['path'] ],
-                    ['alt' => '']
-                );
-
-                $cat->images()->attach($img->id);
-            }
+            $cat->image_id = $img->id;
+            $cat->save();
 
             foreach ($categoria['pratos'] as $prato) {
 

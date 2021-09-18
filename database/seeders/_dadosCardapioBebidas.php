@@ -11,7 +11,7 @@ return $arr_categorias = [
                 'us'=>  'Wine',
                 'es' => 'Vinhos',
             ],
-            'fotos' => [ ['path' => 'categoria/vinhos.jpg' ] ]
+            'foto' => 'categoria/vinhos.jpg'
         ], 
         'pratos' => [
             ['price'=>82, 'traducoes'=> ['pt_BR' => [ 'name' => 'Vinho Alfredo Roca Rosé 2020', 'description' => '' ], 'us' => [ 'name' => 'Vinho Alfredo Roca Rosé 2020', 'description' => '' ],'es' => [ 'name' => 'Vinho Alfredo Roca Rosé 2020', 'description' => '' ] ], 'fotos' => [ ['path' => 'pratos/vinhos/vinho_alfredo_roca_rose_2020.jpg' ] ] ],
@@ -45,7 +45,7 @@ return $arr_categorias = [
                 'us'=>  'Cocktails',
                 'es' => 'Drinks',
             ],
-            'fotos' => [ ['path' => 'categoria/drinks.jpg' ] ]
+            'foto' => 'categoria/drinks.jpg'
         ],
         'pratos' => [
             ['price'=>22, 'traducoes'=> ['pt_BR' => [ 'name' => 'Blood Mary', 'description' => '' ], 'us' => [ 'name' => 'Blood Mary', 'description' => '' ],'es' => [ 'name' => 'Blood Mary', 'description' => '' ] ], 'fotos' => [ ['path' => 'pratos/drinks/blood_mary.jpg' ] ] ],
@@ -73,7 +73,7 @@ return $arr_categorias = [
                 'us'=>  'Doses',
                 'es' => 'Doses',
             ],
-            'fotos' => [ ['path' => 'categoria/doses.jpg' ] ]
+            'foto' => 'categoria/doses.jpg'
         ],
         'pratos' => [ 
             ['price'=>8, 'traducoes'=> ['pt_BR' => [ 'name' => 'Dose Gin Baileys', 'description' => '' ], 'us' => [ 'name' => 'Dose Gin Baileys', 'description' => '' ],'es' => [ 'name' => 'Dose Gin Baileys', 'description' => '' ] ], 'fotos' => [ ['path' => 'pratos/doses/dose_gin_baileys.jpg' ] ] ],
@@ -117,7 +117,7 @@ return $arr_categorias = [
                 'us'=>  'Beer',
                 'es' => 'Cerveja',
             ],
-            'fotos' => [ ['path' => 'categoria/cerveja.jpg' ] ]
+            'foto' => 'categoria/cerveja.jpg'
         ],
         'pratos' => [ 
             ['price'=>8, 'traducoes'=> ['pt_BR' => [ 'name' => 'Chopp Hipnose Pilsen 500ml', 'description' => '' ], 'us' => [ 'name' => 'Chopp Hipnose Pilsen 500ml', 'description' => '' ],'es' => [ 'name' => 'Chopp Hipnose Pilsen 500ml', 'description' => '' ] ], 'fotos' => [ ['path' => 'pratos/cervejas/chopp_hipnose_pilsen_500ml.jpg' ] ] ],
@@ -138,7 +138,7 @@ return $arr_categorias = [
                 'us'=>  'Soft Drinks',
                 'es' => 'Bebidas não Alcoolicas',
             ],
-            'fotos' => [ ['path' => 'categoria/sem_alcool.jpg' ] ]
+            'foto' => 'categoria/sem_alcool.jpg'
         ],
         'pratos' => [ 
             ['price'=>8, 'traducoes'=> ['pt_BR' => [ 'name' => 'Suco Natural Laranja/melancia/Limao', 'description' => '' ], 'us' => [ 'name' => 'Suco Natural Laranja/melancia/Limao', 'description' => '' ],'es' => [ 'name' => 'Suco Natural Laranja/melancia/Limao', 'description' => '' ] ], 'fotos' => [ ['path' => 'pratos/sem_alcool/suco_natural_laranja_melancia_limao.jpg' ] ] ],
