@@ -20,117 +20,34 @@ class CardapioBebidasSeeder extends Seeder
     public function run()
     {
     
-        $arr_categorias = [
-            /**
-             * Bebidas
-             */
-            [
-                'traducoes' => [
-                    'pt_BR' => 'Bebidas',
-                    'us'=>  'Drinks',
-                    'es' => 'Bebidas',
-                ],
-                'pratos' => [
-                    /**
-                     * Bebidas
-                     */
-                    [
-                        'price' => 25.00,
-                        'traducoes' => [
-                            'pt_BR' => [
-                                'name' => 'Bebidas',
-                                'description' => ''
-                            ],
-                            'us' => [
-                                'name' => 'Drinks',
-                                'description' => ''
-                            ],
-                            'es' => [
-                                'name' => 'Bebidas',
-                                'description' => ''
-                            ]
-                        ]
-
-                    ]
-                ]
-            ],
-            /**
-             * Drinks
-             */
-            [
-                'traducoes' => [
-                    'pt_BR' => 'Drinks',
-                    'us'=>  'Cocktails',
-                    'es' => 'Drinks',
-                ],
-                'pratos' => [
-                    /**
-                     * Drinks
-                     */
-                    [
-                        'price' => 25.00,
-                        'traducoes' => [
-                            'pt_BR' => [
-                                'name' => 'Drinks',
-                                'description' => ''
-                            ],
-                            'us' => [
-                                'name' => 'Cocktails',
-                                'description' => ''
-                            ],
-                            'es' => [
-                                'name' => 'Drinks',
-                                'description' => ''
-                            ]
-                        ]
-
-                    ]
-                ]
-            ],
-            /**
-             * Vinhos
-             */
-            [
-                'traducoes' => [
-                    'pt_BR' => 'Vinhos',
-                    'us'=>  'Wine',
-                    'es' => 'Vinhos',
-                ],
-                'pratos' => [
-                    /**
-                     * Vinhos
-                     */
-                    [
-                        'price' => 25.00,
-                        'traducoes' => [
-                            'pt_BR' => [
-                                'name' => 'Vinhos',
-                                'description' => ''
-                            ],
-                            'us' => [
-                                'name' => 'Wine',
-                                'description' => ''
-                            ],
-                            'es' => [
-                                'name' => 'Vinhos',
-                                'description' => ''
-                            ]
-                        ]
-
-                    ]
-                ]
-            ]
-        ];
+        /** @noinspection UntrustedInclusionInspection */
+        $arr_categorias = include '_dadosCardapioBebidas.php';
 
         foreach ($arr_categorias as $categoria) {
 
-            $cat = Categoria::create();
+            if( $categoria['categoria']['id'] == null ){
 
-            foreach ($categoria['traducoes'] as $key => $value){
-                $cat->translations()->create([
-                    'locale'      => $key,
-                    'translation' => ['name' => $value]
-                ]);
+                $cat = Categoria::create();
+
+                foreach ($categoria['categoria']['traducoes'] as $key => $value){
+                    $cat->translations()->create([
+                        'locale'      => $key,
+                        'translation' => ['name' => $value]
+                    ]);
+                }
+
+            }else{
+                $cat = Categoria::findOrFail( $categoria['categoria']['id'] );
+            }
+
+            foreach ($categoria['categoria']['fotos'] as $foto){
+
+                $img = Image::firstOrCreate(
+                    ['path' => $foto['path'] ],
+                    ['alt' => '']
+                );
+
+                $cat->images()->attach($img->id);
             }
 
             foreach ($categoria['pratos'] as $prato) {
@@ -145,6 +62,16 @@ class CardapioBebidasSeeder extends Seeder
                         'locale'      => $key,
                         'translation' => $value
                     ]);
+                }
+
+                foreach ($prato['fotos'] as $foto){
+
+                    $img = Image::firstOrCreate(
+                        ['path' => $foto['path'] ],
+                        ['alt' => '']
+                    );
+
+                    $dish->images()->attach($img->id);
                 }
             }
         }
