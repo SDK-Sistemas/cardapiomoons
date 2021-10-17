@@ -13,12 +13,12 @@
         <div class="py-12 ">
            <h1 class="my-4 text-lg font-bold bold mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <span>
-                   Usuário {{user.name}}
+                   Novo Usuário
                 </span>
             </h1>
             <div class="mx-auto sm:px-6 lg:px-8 max-w-7xl py-4">
                 
-                <form @submit.prevent="submit(user.id)">
+                <form @submit.prevent="submit">
                     <div class="grid grid-cols-2 gap-2 my-4">
                         <div>
                             <BreezeLabel value="Nome" />
@@ -70,27 +70,21 @@
 
         props: {
             auth: Object,
-            errors: Object,
-            user: Object
+            errors: Object
         },
         setup () {
             const form = useForm({
                 name: null,
                 email: null,
                 password: null,
-                password_confirmation : null,
-                _method: 'PUT'
+                password_confirmation : null
             })
 
-            function submit(id) {
-                Inertia.post(route('adm.users.update', id), form)
+            function submit() {
+                Inertia.post(route('adm.users.store'), form)
             }
 
             return { form, submit }
-        },
-        mounted(){
-            this.form.name = this.user.name
-            this.form.email = this.user.email
         }
     }
 </script>

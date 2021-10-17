@@ -8,9 +8,9 @@
             <div class="flex">
               <!-- Logo -->
               <div class="flex-shrink-0 flex items-center">
-                <inertia-link :href="route('dashboard')">
+                 <breeze-nav-link :href="route('dashboard')" :active="false">
                   <breeze-application-logo class="block h-9 w-auto" />
-                </inertia-link>
+                </breeze-nav-link>
               </div>
 
               <!-- Navigation Links -->
@@ -19,7 +19,19 @@
                   :href="route('dashboard')"
                   :active="route().current('dashboard')"
                 >
-                  Dashboard
+                  Home
+                </breeze-nav-link>
+                <breeze-nav-link
+                  :href="route('adm.categorias.index')"
+                  :active="route().current('adm.categorias.index')"
+                >
+                  Categorias
+                </breeze-nav-link>
+                <breeze-nav-link
+                  :href="route('adm.users.index')"
+                  :active="route().current('adm.users.index')"
+                >
+                  Usuários
                 </breeze-nav-link>
               </div>
             </div>

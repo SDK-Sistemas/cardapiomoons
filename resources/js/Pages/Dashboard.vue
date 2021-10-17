@@ -15,12 +15,6 @@
                 <breeze-card-item title="Categorias" :url="route('adm.categorias.index')">
                     <span> Gestão das Categorias e Pratos do Cardário.</span>
                 </breeze-card-item>
-                <breeze-card-item title="Menus" url="#">
-                    <span> Gestão dos Menus do Cardário.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Banners" url="#">
-                    <span> Gestão dos Banners do Site.</span>
-                </breeze-card-item>
                 <breeze-card-item title="Usuários" :url="route('adm.users.index')">
                     <span> Gestão dos usuários do Painel Administrativo.</span>
                 </breeze-card-item>

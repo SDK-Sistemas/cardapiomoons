@@ -4,26 +4,25 @@
             <div class="flex justify-between">
                 <div>
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Categorias
+                        <span>Categorias</span> 
                     </h2>
+                </div>
+                <div>
+                    <BreezeButtonLink :href="route('adm.categorias.create')">Nova Categoria</BreezeButtonLink>
                 </div>
             </div>
         </template>
 
         <div class="py-12 ">
-            <div class="flex gap-x-2 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <breeze-card-item title="Categorias" url="#">
-                    <span> Gestão das Categorias e Pratos do Cardário.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Menus" url="#">
-                    <span> Gestão dos Menus do Cardário.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Banners" url="#">
-                    <span> Gestão dos Banners do Site.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Usuários" url="#">
-                    <span> Gestão dos usuários do Painel Administrativo.</span>
-                </breeze-card-item>
+            <div class="grid grid-cols-3 gap-4 mx-auto max-w-7xl">
+                <breeze-card-categoria 
+                    v-for="categoria in categorias" 
+                    v-bind:key="categoria.id" 
+                    :categoria="categoria" 
+                    :url="route('adm.categorias.show', categoria.id)"
+                >
+                    <span>{{categoria.description}}</span>
+                </breeze-card-categoria>
             </div>
         </div>
     </breeze-authenticated-layout>
@@ -31,40 +30,20 @@
 
 <script>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
-    import BreezeCardItem from '@/Components/CardItem'
-    import { Inertia } from '@inertiajs/inertia'
+    import BreezeCardCategoria from '@/Components/CardCategoria'
+    import BreezeButtonLink from '@/Components/ButtonLink'
 
     export default {
         components: {
             BreezeAuthenticatedLayout,
-            BreezeCardItem
+            BreezeCardCategoria,
+            BreezeButtonLink
         },
 
         props: {
             auth: Object,
             errors: Object,
-        },
-        data(){
-            return {
-                input: {
-                    search: null
-                },
-                showCancelados : true
-            }
-        },
-
-        methods: {
-            getEntregues(){
-                Inertia.reload({
-                    preserveState: true,
-                })
-            }
-        },
-
-        mounted: function () {
-            window.setInterval(() => {
-                this.getEntregues()
-            }, 10000)
+            categorias: Object,
         }
     }
 </script>

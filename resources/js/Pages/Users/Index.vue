@@ -7,23 +7,30 @@
                         Users
                     </h2>
                 </div>
+                <div>
+                    <BreezeButtonLink class="mx-2" :href="route('adm.users.create')">Novo Usuário</BreezeButtonLink>
+                </div>
             </div>
         </template>
 
         <div class="py-12 ">
-            <div class="flex gap-x-2 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <breeze-card-item title="Categorias" url="#">
-                    <span> Gestão das Categorias e Pratos do Cardário.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Menus" url="#">
-                    <span> Gestão dos Menus do Cardário.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Banners" url="#">
-                    <span> Gestão dos Banners do Site.</span>
-                </breeze-card-item>
-                <breeze-card-item title="Usuários" url="#">
-                    <span> Gestão dos usuários do Painel Administrativo.</span>
-                </breeze-card-item>
+            <div class="mx-auto sm:px-6 lg:px-8 max-w-7xl py-4">
+                <table class="table-fixed border-b border-gray-200 shadow rounded bg-white">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-2 text-xs text-gray-500 w-1/12">Nome</th>
+                            <th class="px-6 py-2 text-xs text-gray-500 w-1/12">E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr v-for="user in users" v-bind:key="user.id" >
+                            <td class="px-6 py-4 text-sm text-gray-500 text-center font-bold border border-gray-100" scope="row">
+                                <a :href="route('adm.users.show', user.id)">{{user.name}}</a>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-gray-500 text-center border border-gray-100">{{user.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </breeze-authenticated-layout>
@@ -31,40 +38,18 @@
 
 <script>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
-    import BreezeCardItem from '@/Components/CardItem'
-    import { Inertia } from '@inertiajs/inertia'
+    import BreezeButtonLink from '@/Components/ButtonLink'
 
     export default {
         components: {
             BreezeAuthenticatedLayout,
-            BreezeCardItem
+            BreezeButtonLink
         },
 
         props: {
             auth: Object,
             errors: Object,
-        },
-        data(){
-            return {
-                input: {
-                    search: null
-                },
-                showCancelados : true
-            }
-        },
-
-        methods: {
-            getEntregues(){
-                Inertia.reload({
-                    preserveState: true,
-                })
-            }
-        },
-
-        mounted: function () {
-            window.setInterval(() => {
-                this.getEntregues()
-            }, 10000)
+            users: Object
         }
     }
 </script>

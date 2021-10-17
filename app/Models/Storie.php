@@ -13,7 +13,7 @@ class Storie extends Model
     use HasFactory;
 
     protected $appends = ['title', 'subtitle', 'description'];
-
+    protected $guarded = [];
     protected $with = ['image', 'translations'];
 
     public function image()
