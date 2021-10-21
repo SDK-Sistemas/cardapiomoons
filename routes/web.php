@@ -54,6 +54,13 @@ Route::middleware([SetLocale::class])->group(function () {
     });
 });
 
+Route::middleware(['auth', 'verified'])->name('adm.')->prefix('adm')->group( function () {
+    Route::resources([
+        'categorias' => 'App\Http\Controllers\Adm\CategoriaController',
+        'categorias.pratos' => 'App\Http\Controllers\Adm\PratoController',
+        'users' => 'App\Http\Controllers\Adm\UserController'
+    ]);
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

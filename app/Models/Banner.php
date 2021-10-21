@@ -18,7 +18,7 @@ class Banner extends Model
     use HasFactory;
 
     protected object $currTrans;
-
+    protected $guarded = [];
     protected $appends = ['title', 'tagline', 'text'];
 
     protected $with = ['image', 'translations'];
