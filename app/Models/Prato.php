@@ -21,8 +21,8 @@ class Prato extends Model
 
     protected object $currTrans;
 
-    protected $appends = ['title', 'subtitle', 'description'];
-
+    protected $appends = ['name', 'description'];
+    protected $guarded = [];
     protected $with = ['translations', 'images'];
 
     /**

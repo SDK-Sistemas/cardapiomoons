@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
-
+    protected $guarded = [];
     public function banner()
     {
         return $this->hasOne(Banner::class, 'foreign_key', 'local_key');

@@ -22,9 +22,9 @@ class Categoria extends Model
 
     protected object $currTrans;
 
-    protected $appends = ['title', 'subtitle', 'description'];
-
-    protected $with = ['translations'];
+    protected $appends = ['name', 'description'];
+    protected $guarded = [];
+    protected $with = ['translations', 'image'];
 
     /**
      * Perform any actions required after the model boots.
