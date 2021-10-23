@@ -40,4 +40,17 @@ class CategoriaController extends Controller
                 ->load('pratos.images'),
         ]);
     }
+
+    public function bar()
+    {
+        $categoria = Categoria::whereHas('translations', function($query){
+            $query->where("translation->name", "Bar");
+        })->first() ?? Categoria::first();
+    
+        return view('categorias.show', [
+            'categoria' => $categoria
+                ->load('pratos.images'),
+        ]);
+
+    }
 }

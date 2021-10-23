@@ -45,6 +45,9 @@ Route::middleware([SetLocale::class])->group(function () {
 
         Route::get('/', [CategoriaController::class, 'index'])
             ->name('cardapio');
+        
+        Route::get('/bar', [CategoriaController::class, 'bar'])
+            ->name('bar');
 
         Route::get('/{categoria}', [CategoriaController::class, 'show'])
             ->name('categoria');

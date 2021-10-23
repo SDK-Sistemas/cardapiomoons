@@ -55,14 +55,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    @php
-                                        $categoria_bar = \App\Models\Categoria::whereHas('translations', function($query){
-                                            $query->where('translation->name', 'Bar');
-                                        })->first();
-                                        $bar_id = ( $categoria_bar )? $categoria_bar->id : 1;
-                                    @endphp
-                                    <a href="{{ route('categoria', ['categoria' => $bar_id]) }}"
-                                        class="{{ url()->current() == route('categoria', ['categoria' => $bar_id]) ? 'active' : '' }}">
+                                    <a href="{{ route('bar') }}"
+                                        class="{{ Route::is('bar')  ? 'active' : '' }}">
                                         <span>
                                             {{ __('Bar')  }}
                                         </span>
