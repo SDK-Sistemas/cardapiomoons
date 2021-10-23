@@ -30,6 +30,20 @@
     {{-- Theme --}}
     <meta name="msapplication-TileColor" content="#151515">
     <meta name="theme-color" content="#151515">
+
+    <style>
+        /**
+        * Remover Espaço em /cardapio para versão mobile
+        */
+        @media screen and (max-width: 1200px){
+            body  div.container div.page.travel-list.right-sidebar  div.page_body div.left_content  div.item_right {
+                min-height: auto !important;
+                padding-bottom: 0;
+                padding-top: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
