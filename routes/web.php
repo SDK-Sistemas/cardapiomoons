@@ -35,8 +35,13 @@ Route::get('/migrar', function () {
 	Artisan::call('db:seed', [
 		'--class' => 'CardapioBebidasSeeder',
 	]);
-	
-	dd($exitCode);
+
+});
+
+Route::get('/storage-link', function () {
+   
+	Artisan::call('storage:link');
+		
 });
 
 
