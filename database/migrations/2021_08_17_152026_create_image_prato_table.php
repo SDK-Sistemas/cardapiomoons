@@ -28,6 +28,6 @@ class CreateImagePratoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('image_prato_');
+        Schema::dropIfExists('image_prato');
     }
 }

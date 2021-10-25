@@ -23,6 +23,22 @@ use Inertia\Inertia;
 |
 */
 
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/migrar', function () {
+   
+	Artisan::call('migrate:refresh', [
+		'--force' => true,
+		'--seed' => true,
+	]);
+	
+	Artisan::call('db:seed', [
+		'--class' => 'CardapioBebidasSeeder',
+	]);
+	
+	dd($exitCode);
+});
+
 
 Route::post('/', ChangeLanguageController::class)
     ->name('lang');
