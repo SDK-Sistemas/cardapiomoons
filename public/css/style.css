@@ -11631,7 +11631,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .page_404 .logo {
   width: 138px;
   height: 48px;
-  background: url(../img/logo.svg) center center no-repeat;
+  background: url(../img/logo.png) center center no-repeat;
   background-size: contain;
   display: block;
   position: absolute;
