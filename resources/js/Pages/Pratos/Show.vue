@@ -8,7 +8,7 @@
                     </h2>
                 </div>
                 <div>
-                    <BreezeButtonLink class="mx-2 bg-red-600" href="#" >Deletar</BreezeButtonLink>
+                    <BreezeButtonLink class="mx-2 bg-red-600" href="#" v-on:click="call_delete()">Deletar</BreezeButtonLink>
                 </div>
             </div>
         </template>
@@ -75,6 +75,16 @@
         mounted(){
             this.form.translations = this.prato.translations
             this.form.price = parseFloat(this.prato.price.replace(',', '.'))
+        },
+        methods: {
+            call_delete: function(){
+
+               if(confirm(`Tem certeza que deseja deletar o prato ${this.prato.name}? Está ação é irreversível!`) ){
+                   Inertia.delete(route('adm.categorias.pratos.destroy', [this.categoria.id, this.prato.id]))
+               }else{
+                   alert("Processo cancelado com sucesso!");
+               }
+            }
         }
     }
 </script>
