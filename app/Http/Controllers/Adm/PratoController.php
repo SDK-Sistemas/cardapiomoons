@@ -102,10 +102,12 @@ class PratoController extends Controller
         try {
                        
             if( $request->file('avatar') != null ){
-    
+                
+                $extension = $request->file('avatar')->extension();
+
                 $path = $request->file('avatar')->storeAs(
                     'pratos',
-                    $prato->id,
+                    "$prato->id.$extension",
                     'public'
                 );
     

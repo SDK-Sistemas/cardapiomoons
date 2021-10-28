@@ -108,10 +108,12 @@ class CategoriaController extends Controller
         try {
                        
             if( $request->file('avatar') != null ){
-    
+
+                $extension = $request->file('avatar')->extension();
+
                 $path = $request->file('avatar')->storeAs(
                     'categorias',
-                    $categoria->id,
+                    "$categoria->id.$extension",
                     'public'
                 );
     
