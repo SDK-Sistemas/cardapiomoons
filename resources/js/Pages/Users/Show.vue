@@ -7,6 +7,9 @@
                         Users
                     </h2>
                 </div>
+                <div>
+                    <BreezeButtonLink class="mx-2 bg-red-600" href="#" v-on:click="call_delete()">Deletar</BreezeButtonLink>
+                </div>
             </div>
         </template>
 
@@ -59,9 +62,11 @@
     import BreezeInput from '@/Components/Input'
     import BreezeButton from '@/Components/Button'
     import BreezeLabel from '@/Components/Label'
+    import BreezeButtonLink from '@/Components/ButtonLink'
 
     export default {
         components: {
+            BreezeButtonLink,
             BreezeAuthenticatedLayout,
             BreezeInput,
             BreezeButton,
@@ -91,6 +96,16 @@
         mounted(){
             this.form.name = this.user.name
             this.form.email = this.user.email
+        },
+        methods: {
+            call_delete: function(){
+
+               if(confirm(`Tem certeza que deseja deletar o usuário ${this.user.name}? Está ação é irreversível!`) ){
+                   Inertia.delete(route('adm.users.destroy', this.user.id))
+               }else{
+                   alert("Processo cancelado com sucesso!");
+               }
+            }
         }
     }
 </script>

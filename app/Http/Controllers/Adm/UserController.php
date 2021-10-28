@@ -81,4 +81,15 @@ class UserController extends Controller
             return Redirect::route('adm.users.show', ['user' => $user->id]);
         }
     }
+    
+    public function destroy(User $user)
+    {
+        try{
+            $user->delete();
+            return Redirect::route('adm.users.index');
+
+        } catch (\Throwable $th) {
+            return Redirect::route('adm.users.show', ['user' => $user->id]);
+        }
+    }
 }

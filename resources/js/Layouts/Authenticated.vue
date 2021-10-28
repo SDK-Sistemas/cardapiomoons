@@ -192,6 +192,9 @@
       <header class="bg-white shadow" v-if="$slots.header">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <slot name="header" />
+          
+          <PopUp v-if="$page.props.flash.message" :message="$page.props.flash.message" :iserror="true" />
+
         </div>
       </header>
 
@@ -207,11 +210,13 @@
 import BreezeApplicationLogo from "@/Components/ApplicationLogo";
 import BreezeDropdown from "@/Components/Dropdown";
 import BreezeDropdownLink from "@/Components/DropdownLink";
+import PopUp from "@/Components/PopUp";
 import BreezeNavLink from "@/Components/NavLink";
 import BreezeResponsiveNavLink from "@/Components/ResponsiveNavLink";
 
 export default {
   components: {
+    PopUp,
     BreezeApplicationLogo,
     BreezeDropdown,
     BreezeDropdownLink,
