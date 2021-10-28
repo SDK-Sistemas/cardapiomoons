@@ -7,6 +7,9 @@
                         Categorias / Pratos
                     </h2>
                 </div>
+                <div>
+                    <BreezeButtonLink class="mx-2 bg-red-600" href="#" >Deletar</BreezeButtonLink>
+                </div>
             </div>
         </template>
 
@@ -39,9 +42,11 @@
     import FormLocate from '@/Components/FormLocate'
     import { Inertia } from '@inertiajs/inertia'
     import { useForm } from '@inertiajs/inertia-vue3'
-    
+    import BreezeButtonLink from '@/Components/ButtonLink'
+
     export default {
         components: {
+            BreezeButtonLink,
             BreezeAuthenticatedLayout,
             BreezeInput,
             ImageUpload,

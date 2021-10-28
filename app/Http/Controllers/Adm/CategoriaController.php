@@ -130,4 +130,53 @@ class CategoriaController extends Controller
             throw $th; 
         }
     }
+
+    public function destroy(Categoria $categoria)
+    {
+        
+        try{
+
+            $img_paths_to_delete = ( $categoria->image )? [$categoria->image->path] : [];
+            
+            foreach($categoria->pratos as $prato)
+                foreach($prato->images as $image)
+                    array_push($img_paths_to_delete, $image->path);
+
+        } catch (\Throwable $th) {
+            return back()->with('message', 'Falha ao ler imagens do banco de dados. msg: '. $th->getMessage());
+        }
+        
+        try{
+
+            DB::beginTransaction();
+
+            foreach($categoria->pratos as $prato){
+                $prato->translations()->delete();
+                $prato->delete();
+            }
+
+            $categoria->translations()->delete();
+            $categoria->delete();
+
+            DB::commit();
+
+        } catch (\Throwable $th) {
+            DB::rollback();
+            return Redirect::route('adm.categorias.show', ['categoria' => $categoria->id])
+                            ->with('erros', ['error' => 'Falha ao deletar categoria do banco de dados. msg: '. $th->getMessage() ]);
+        }
+
+        try {
+            
+            if(count($img_paths_to_delete))
+                Storage::delete($img_paths_to_delete);
+
+            return Redirect::route('adm.categorias.index');
+
+        } catch (\Throwable $th) {
+            return Redirect::route('adm.categorias.show', ['categoria' => $categoria->id])
+                            ->with('erros', ['error' => 'Falha ao deletar arquivos físicos. msg: '. $th->getMessage() ]);
+        }
+    }
+    
 }

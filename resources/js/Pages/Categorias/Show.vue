@@ -10,6 +10,7 @@
                 <div>
                     <BreezeButtonLink class="mx-2" :href="route('adm.categorias.edit', categoria.id)">Editar Categoria</BreezeButtonLink>
                     <BreezeButtonLink class="mx-2" :href="route('adm.categorias.pratos.create', categoria.id)">Novo Prato</BreezeButtonLink>
+                    <BreezeButtonLink class="mx-2 bg-red-600" href="#" v-on:click="call_delete()">Deletar</BreezeButtonLink>
                 </div>
             </div>
         </template>
@@ -20,6 +21,7 @@
                    Pratos da Categoria {{categoria.name}}
                 </span>
             </h1>
+            
             <div class="mx-auto sm:px-6 lg:px-8 max-w-7xl py-4">
                 <table class="table-fixed border-b border-gray-200 shadow rounded bg-white">
                     <thead class="bg-gray-50">
@@ -63,8 +65,8 @@
 <script>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
     import BreezeCardItem from '@/Components/CardItem'
-    import { Inertia } from '@inertiajs/inertia'
     import BreezeButtonLink from '@/Components/ButtonLink'
+    import { Inertia } from '@inertiajs/inertia'
 
     export default {
         components: {
@@ -76,7 +78,18 @@
         props: {
             auth: Object,
             errors: Object,
-            categoria: Object
+            flash: Object,
+            categoria: Object,
+        },
+        methods: {
+            call_delete: function(){
+
+               if(confirm(`Tem certeza que deseja deletar a categoria ${this.categoria.name}? Está ação é irreversível!`) ){
+                   Inertia.delete(route('adm.categorias.destroy', this.categoria.id))
+               }else{
+                   alert("Processo cancelado com sucesso!");
+               }
+            }
         }
     }
 </script>
