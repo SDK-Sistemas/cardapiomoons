@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-
-
     <div class="tour_page right-sidebar">
 {{--        <div class="bg-image" style="background-image: url({{ asset('storage/' . optional($prato->categoria->image)->path) }})">--}}
 
@@ -27,9 +24,9 @@
                 <div class="wrap">
                     <div class="wrap_float">
                         <div class="top-info">
-                            <p class="country">{{ $prato->categoria->title }}</p>
+                            <p class="country">{{ $prato->categoria->name }}</p>
                             <h1 class="tour_title">
-                                {{ $prato->title }}
+                                {{ $prato->name }}
                             </h1>
                             <div class="controls">
                                 <div class="arrows" id="tour-head-slider-arrows">

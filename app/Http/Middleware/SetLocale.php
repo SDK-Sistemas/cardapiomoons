@@ -17,7 +17,7 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next)
     {
-        app()->setlocale(Session::get('lang'));
+        app()->setlocale(Session::get('lang') ?? 'pt_BR');
 
         return $next($request);
     }
