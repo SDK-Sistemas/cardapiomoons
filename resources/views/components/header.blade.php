@@ -24,7 +24,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('cardapio') }}"
-                                        class="{{ Route::is('cardapio') ? 'active' : '' }}">
+                                        class="{{(Route::is('cardapio') || Route::is('home_cardapio') )? 'active' : '' }}">
                                         <span>
                                             {{ __('Cardápio') }}
                                         </span>
