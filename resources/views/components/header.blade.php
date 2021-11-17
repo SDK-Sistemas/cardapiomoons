@@ -1,4 +1,4 @@
-<div class="top_panel @if (in_array(Route::currentRouteName(), ['cardapio', 'contato', 'reservas'])) inversion @endif">
+<div class="top_panel @if (in_array(Route::currentRouteName(), ['cardapio', 'home_cardapio', 'contato', 'reservas'])) inversion @endif">
     <div class="wrap">
         <div class="wrap_float">
 
