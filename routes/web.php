@@ -50,7 +50,10 @@ Route::post('/', ChangeLanguageController::class)
 
 Route::middleware([SetLocale::class])->group(function () {
 
-    Route::get('/', HomeController::class)
+    Route::get('/', [CategoriaController::class, 'index'])
+            ->name('home_cardapio');
+
+    Route::get('/home', HomeController::class)
         ->name('home');
 
     Route::view('/quem-somos', 'quem-somos')
