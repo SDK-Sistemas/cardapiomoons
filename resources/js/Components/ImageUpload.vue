@@ -2,7 +2,7 @@
     <div>
       <div v-if="modelImage != null" class="max-w-sm rounded overflow-hidden shadow-lg bg-white my-4">
           <p class="text-medium font-bold p-4">Foto Atual</p>
-          <img class="w-full" :src="`${route('home')}/storage/${modelImage.path}`">
+          <img class="w-full" :src="`${route('home_cardapio')}/storage/${modelImage.path}`">
       </div>
 
       <input type="file" @input="modelValue.avatar = $event.target.files[0]; $emit('update:modelValue', modelValue)" name="avatar" placeholder="TROCAR FOTO"/>

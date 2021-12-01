@@ -1,7 +1,7 @@
 <template>
   <a :href="url">
     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-        <img v-show="categoria.image != null" class="w-full" :src="categoria.image == null? '#' : route('home')+'/storage/'+categoria.image.path" :alt="categoria.name">
+        <img v-show="categoria.image != null" class="w-full" :src="categoria.image == null? '#' : route('home_cardapio')+'/storage/'+categoria.image.path" :alt="categoria.name">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">{{categoria.name}}</div>
           <p class="text-gray-700 text-base">
