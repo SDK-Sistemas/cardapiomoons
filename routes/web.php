@@ -25,24 +25,24 @@ use Inertia\Inertia;
 
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/migrar', function () {
+// Route::get('/migrar', function () {
    
-	Artisan::call('migrate:refresh', [
-		'--force' => true,
-		'--seed' => true,
-	]);
+// 	Artisan::call('migrate:refresh', [
+// 		'--force' => true,
+// 		'--seed' => true,
+// 	]);
 	
-	Artisan::call('db:seed', [
-		'--class' => 'CardapioBebidasSeeder',
-	]);
+// 	Artisan::call('db:seed', [
+// 		'--class' => 'CardapioBebidasSeeder',
+// 	]);
 
-});
+// });
 
-Route::get('/storage-link', function () {
+// Route::get('/storage-link', function () {
    
-	Artisan::call('storage:link');
+// 	Artisan::call('storage:link');
 		
-});
+// });
 
 
 Route::post('/', ChangeLanguageController::class)
