@@ -24,8 +24,8 @@
                             <a href="tel:551434362310">(14) 3436 2310</a>
                         </div>
                         <div class="email" style="font-size: 10px">
-                            <a href="mailto:contato@moonsrestaurante.com.br"
-                                style="font-size: 18px">contato@moonsrestaurante.com.br</a>
+                            <a href="mailto:HB6V7-FB@accor.com"
+                                style="font-size: 18px">HB6V7-FB@accor.com</a>
                         </div>
                         <p class="address">
                             Avenida Marechal Castelo Branco, 55 - CEP: 18.683-430
