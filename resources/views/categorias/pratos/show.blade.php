@@ -3,13 +3,9 @@
 @section('content')
 
     <div class="tour_page right-sidebar">
-{{--        <div class="bg-image" style="background-image: url({{ asset('storage/' . optional($prato->categoria->image)->path) }})">--}}
-
-{{--        </div>--}}
-
 
         <div class="tour_page_head" style="background-image: url({{
-                asset('storage/' . optional($prato->categoria->image)->path)
+                asset('img/backgrounds/categorias.jpg')
             }});">
 
             {{-- Breadcrumbs --}}

@@ -31,9 +31,9 @@
                             Avenida Marechal Castelo Branco, 55 - CEP: 18.683-430
                         </p>
                         <div class="socials social-links" style="justify-content: flex-start">
-                            <a href="instagram.com/moons.restaurante" class="link facebook"
+                            <a href="https://instagram.com/moons.restaurante/" class="link facebook"
                                 target="_blank"><span></span></a>
-                            <a href="facebook.com/moons.restaurante" class="link instagram"
+                            <a href="https://facebook.com/moons.restaurante" class="link instagram"
                                 target="_blank"><span></span></a>
                         </div>
                     </div>

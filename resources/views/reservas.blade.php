@@ -13,19 +13,17 @@
                 <div class="wrap_float">
                     <h1 class="title">{{ __('Reservas') }}</h1>
                     <p class="text">
-                        {{ __('Você pode fazer sua reserva diretamente pelo nosso sistema e já garantir sua mesa para o horário desejado, de forma simples e prática. Basta clicar no botão abaixo e será direcionado para para a tela de reservas.') }}
+                        {{ __('Faça sua reserva ligando pra gente e garanta sua mesa para o horário desejado, de forma simples e prática. Clique no botão abaixo pra ligar.') }}
                     </p>
                     <div style="display: flex; justify-content: center; margin-bottom: 120px">
-                        <button class="btn_reserva getin-widget-button" data-partner="xkKM3B1w">
-                            {{ __('Fazer Reserva') }}
-                        </button>
+                        <a role="button" href="tel:+551434362310" class="btn_reserva getin-widget-button">
+                            {{ __('Ligar') }}
+                        </a>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-
-    <script async type="text/javascript" src="https://widget.getinapp.com.br/loader.js"></script>
 
 @endsection
