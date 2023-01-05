@@ -30,7 +30,7 @@
             <div class="wrap">
                 <div class="wrap_float">
                     <div class="posts">
-                        @foreach ($categoria->pratos as $prato)
+                        @foreach ($pratos as $prato)
                             <a href="{{ route('prato', [$categoria, $prato]) }}" class="tour_item"
                                 style="background-image: url({{
                                     asset('storage/' . optional($prato->images->first())->path)

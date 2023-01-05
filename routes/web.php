@@ -87,6 +87,10 @@ Route::middleware(['auth', 'verified'])->name('adm.')->prefix('adm')->group( fun
         'categorias.pratos' => 'App\Http\Controllers\Adm\PratoController',
         'users' => 'App\Http\Controllers\Adm\UserController'
     ]);
+
+    Route::post('categorias/{categoria}/pratos/sort', ['App\Http\Controllers\Adm\PratoController', 'sort'])
+        ->name('categorias.pratos.sort');
+
 });
 
 Route::get('/dashboard', function () {

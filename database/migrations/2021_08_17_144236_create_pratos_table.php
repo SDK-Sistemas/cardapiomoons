@@ -17,6 +17,7 @@ class CreatePratosTable extends Migration
             $table->id();
             $table->foreignId('categoria_id');
             $table->float('price');
+            $table->integer('order')->default(0);
             $table->timestamps();
         });
     }

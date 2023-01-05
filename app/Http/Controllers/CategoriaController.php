@@ -36,8 +36,8 @@ class CategoriaController extends Controller
     public function show(Categoria $categoria): View
     {
         return view('categorias.show', [
-            'categoria' => $categoria
-                ->load('pratos.images'),
+            'categoria' => $categoria,
+            'pratos' => $categoria->pratos()->orderBy('order', 'asc')->orderBy('updated_at', 'desc')->get()
         ]);
     }
 

@@ -91,8 +91,31 @@ class PratoController extends Controller
 
         } catch (\Throwable $th) {
             DB::rollback();
-            dd($th->getMessage());
             return Redirect::route('adm.categorias.pratos.show', ['categoria' => $categoria->id, 'prato' => $prato->id]);
+        }
+
+    }
+
+    public function sort(Categoria $categoria, Request $request)
+    {
+        try {
+                      
+            DB::beginTransaction();
+
+            $items = $request->pratos;
+
+            foreach ($items as $item)
+                if( $prato = Prato::find($item['id']) )
+                    $prato->update(["order" => $item['order']]);
+
+            DB::commit();
+
+            return Redirect::route('adm.categorias.show', ['categoria' => $categoria->id]);
+
+        } catch (\Throwable $th) {
+            DB::rollback();
+            dd($th->getMessage());
+            return Redirect::route('adm.categorias.show', ['categoria' => $categoria->id]);
         }
 
     }
